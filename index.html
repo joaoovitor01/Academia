@@ -1,0 +1,663 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>peso pesado | THE ELECTRIC PULSE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "surface-variant": "#262626",
+              "surface-container": "#191919",
+              "surface-container-low": "#131313",
+              "on-secondary-container": "#f1bfff",
+              "on-secondary": "#530b6f",
+              "tertiary-fixed-dim": "#fa7c8b",
+              "on-surface-variant": "#ababab",
+              "secondary-fixed-dim": "#ebaeff",
+              tertiary: "#ff95a0",
+              "inverse-surface": "#f9f9f9",
+              "surface-container-highest": "#262626",
+              "primary-container": "#c284ff",
+              "primary-dim": "#9c48ea",
+              "outline-variant": "#484848",
+              error: "#ff6e84",
+              "secondary-fixed": "#f1c1ff",
+              "secondary-dim": "#d28aed",
+              "inverse-primary": "#842cd3",
+              "tertiary-fixed": "#ff909c",
+              "inverse-on-surface": "#555555",
+              "surface-dim": "#0e0e0e",
+              "secondary-container": "#6a2785",
+              "on-primary-fixed-variant": "#430076",
+              "on-primary-container": "#360061",
+              "tertiary-container": "#fe7e8e",
+              "on-secondary-fixed": "#550e71",
+              "on-primary": "#47007c",
+              "on-tertiary-fixed": "#39000d",
+              background: "#0e0e0e",
+              "error-dim": "#d73357",
+              "on-error": "#490013",
+              "surface-container-high": "#1f1f1f",
+              "on-tertiary": "#680921",
+              "error-container": "#a70138",
+              "on-primary-fixed": "#000000",
+              primary: "#cc97ff",
+              "primary-fixed-dim": "#b971ff",
+              "on-tertiary-container": "#570018",
+              surface: "#0e0e0e",
+              outline: "#757575",
+              "on-secondary-fixed-variant": "#753290",
+              "tertiary-dim": "#f47786",
+              "surface-bright": "#2c2c2c",
+              "on-error-container": "#ffb2b9",
+              "on-surface": "#ffffff",
+              "surface-container-lowest": "#000000",
+              "on-tertiary-fixed-variant": "#711227",
+              "primary-fixed": "#c284ff",
+              "surface-tint": "#cc97ff",
+              secondary: "#e197fc",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        background-color: #0e0e0e;
+        color: #ffffff;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      .text-glow {
+        text-shadow: 0 0 20px rgba(204, 151, 255, 0.4);
+      }
+      .glass-card {
+        background: rgba(31, 31, 31, 0.6);
+        backdrop-filter: blur(24px);
+      }
+    </style>
+  </head>
+  <body
+    class="selection:bg-primary selection:text-on-primary overflow-x-hidden"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl dark:bg-[#0e0e0e]/60 flex justify-between items-center px-12 py-4 max-w-full mx-auto shadow-[0px_20px_40px_rgba(168,85,247,0.15)]"
+    >
+    <div class="flex items-center gap-4">
+      <div
+        class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
+      >
+        peso pesado
+      </div>
+      
+        <img height="64px" width="64px" src="/img/icon-gym-white1.png" alt="#" />
+      </div>
+      <div class="hidden md:flex items-center gap-12">
+        <a
+          class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#cc97ff] border-b-2 border-[#cc97ff] pb-1 transition-all"
+          href="/index.html"
+          >Home</a
+        >
+        <a
+          class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-gray-400 hover:text-white transition-colors"
+          href="#"
+          >Classes</a
+        >
+        <a
+          class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-gray-400 hover:text-white transition-colors"
+          href="#"
+          >Trainers</a
+        >
+        <a
+          class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-gray-400 hover:text-white transition-colors"
+          href="/planos.html"
+          >Planos</a
+        >
+      </div>
+      <a
+        class="bg-gradient-to-r from-primary-dim to-primary text-on-primary px-8 py-3 rounded-xl font-bold tracking-tight hover:scale-105 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all active:scale-95 duration-200"
+        href="/login.html"
+      >
+        Fazer Login
+      </a>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center px-12 pt-20 overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover opacity-40"
+            data-alt="Intense high-energy gym background with purple neon lights reflecting on dark metallic fitness equipment in a cinematic wide shot"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMSsu4e6GJRBcEQtxWe9ATuNGb9YuQfgN6h1mz4ITDgm2FgH06nRk3hEt6GBmnaPyNoJkhCEHfXmkziNmWECXjR5ZZTaX-6KXbI11okRcyg66Rq3rLxmtKF4kYcJttvhHnPus_3sKbaeYf_aDi3atJxiDrQAJvI5Kk5kEaGz8KDUanXCjMnc3YhSJrKHxyA67jPeHmANzuU3twcRzwCtbAFf-51iVqBB-GLRSQ9A8-iO5GZADLBwbzJe84RaZ9Rw_Tmf4h-RrBQakr"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-surface to-transparent"
+          ></div>
+        </div>
+        <div class="relative z-10 max-w-4xl">
+          <h1
+            class="font-headline font-black text-7xl md:text-9xl tracking-tighter leading-none mb-8 text-on-background"
+          >
+            SUPERE SEUS<br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-glow"
+              >LIMITES</span
+            >
+          </h1>
+          <p
+            class="font-body text-xl text-on-surface-variant max-w-xl mb-12 leading-relaxed"
+          >
+            Experience the electric pulse of high-performance training. Where
+            technology meets sweat in our premium boutique recovery and HIIT
+            studio.
+          </p>
+          <div class="flex items-center gap-6">
+            <button
+              class="bg-gradient-to-r from-primary-dim to-primary text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-all"
+            >
+              START NOW
+            </button>
+            <button
+              class="border border-outline-variant/30 bg-surface-bright/20 backdrop-blur-md text-on-surface px-10 py-5 rounded-xl font-bold text-lg hover:bg-surface-bright/40 transition-all"
+            >
+              VIEW SCHEDULE
+            </button>
+          </div>
+        </div>
+        <!-- Side Floating Stats -->
+      </section>
+      <!-- Featured Classes (Bento Style) -->
+      <section class="py-24 px-12 bg-surface">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div>
+            <span
+              class="font-label text-primary font-bold tracking-widest uppercase mb-4 block"
+              >Our Disciplines</span
+            >
+            <h2 class="font-headline font-extrabold text-5xl text-on-surface">
+              EVOLVE YOUR BODY
+            </h2>
+          </div>
+          <button class="text-primary font-bold flex items-center gap-2 group">
+            EXPLORE ALL CLASSES
+            <span
+              class="material-symbols-outlined group-hover:translate-x-2 transition-transform"
+              >arrow_forward</span
+            >
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[600px]">
+          <div
+            class="md:col-span-8 group relative overflow-hidden rounded-lg surface-container shadow-2xl"
+          >
+            <img
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+              data-alt="Close-up of athlete doing explosive crossfit training with heavy ropes in a dark industrial gym setting with purple lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB35ilhpMPXTsd-G0dcViQpig75u_9iFwDNAOLBAV0F5QGIZu4L-QZYiakp_V1WkfOT3-d8fu0QRmchmkat5mdJpHx2Wjj8eXPj4MYDy3lxkffYhp4LC7p_O6pvS8xjehdDHAG-pnsFL2k-dhAv5Uz0lqvhTICmLLdfb5wHalzXu07Zc7YrAtZSL0c6OProgCNXqZFp1TSPel6gbXe9Y_y8YijRISfPQYGMgZee_CN0GaWFqgjMcBpGKIhJaMj6b2PInnWY2GMdEGH6"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-8 left-8">
+              <h3 class="font-headline font-black text-4xl mb-2">Crossfit</h3>
+              <p class="font-body text-on-surface-variant mb-4">
+                High intensity metabolic conditioning sessions.
+              </p>
+              <span
+                class="inline-block px-4 py-1 bg-primary/20 text-primary rounded-full text-xs font-bold tracking-tighter"
+                >ELITE LEVEL</span
+              >
+            </div>
+          </div>
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-lg surface-container shadow-2xl"
+          >
+            <img
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+              data-alt="Young woman in serene yoga pose within a dark modern studio with atmospheric purple backlight and soft shadows"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsrYZEB287_XveDB0eqwh7tkZLqlrvxSCp4ldxd896pVaKJemk_gxCvYHIYZLppbTdr-ft_z1yPTXH0HVO3u_SJP5UH-Ms0C2fLjicTC1EG8de0nI761l3Txuv8JgyRQnFUHJXvNAzy1GkVMofVJtNSVAxx3JPjdbG7m9M2vWZhf32UOO-ruiM6tBTwTPyTU3ZCEkTZ85Kb4PTjzNLrdPAgAFVMBZemouVc-9gTA7oteUuwZm0GDv_R7LK4k9iaCk1SAmK7ymYqKMU"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-8 left-8">
+              <h3 class="font-headline font-black text-4xl mb-2">Yoga</h3>
+              <p class="font-body text-on-surface-variant mb-4">
+                Find your flow in the neon dusk.
+              </p>
+              <span
+                class="inline-block px-4 py-1 bg-secondary/20 text-secondary rounded-full text-xs font-bold tracking-tighter"
+                >RECOVERY</span
+              >
+            </div>
+          </div>
+          <div
+            class="md:col-span-12 group relative overflow-hidden rounded-lg surface-container shadow-2xl h-64 md:h-auto"
+          >
+            <img
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+              data-alt="Focused weightlifter lifting heavy barbell with dramatic lighting and chalk dust in the air inside a premium gym"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYPBkxuxQmWuV-3gQmd-0b9yk3Ic1PS8J3CStCnD_QHkGOQbqVwjjHdyKekqWm1Mn9PrOLUZrrzXnx0WUtDljDicH23J3u3RxV2MtFRJsYYbN7jF3WY6Up-6OmdHOoyO09KMe9u-kF9WXg8xvDgLY3BY9SNEvlev55rwojefWrQ2BUFgQAqvthLEbGt7SorcKCXnqMNwF7ItU1cntA09LRom6F-JGGI0tw6Ii67ZJYwr0LBADxrhtPEYOA8E1pyWgQ4FiyzSGDOva5"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-8 left-8">
+              <h3 class="font-headline font-black text-4xl mb-2">
+                Weightlifting
+              </h3>
+              <p class="font-body text-on-surface-variant">
+                Precision strength training for maximum power output.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Us -->
+      <section class="py-24 px-12 bg-surface-container-low">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        >
+          <div class="relative">
+            <div
+              class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"
+            ></div>
+            <div
+              class="absolute -bottom-10 -right-10 w-60 h-60 bg-secondary/10 rounded-full blur-3xl"
+            ></div>
+            <div
+              class="rounded-lg overflow-hidden relative shadow-[0_0_50px_rgba(168,85,247,0.1)]"
+            >
+              <img
+                class="w-full h-[600px] object-cover"
+                data-alt="Ultra-modern gym interior with sleek black equipment and purple LED neon strip lighting along the walls"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWBPmgVMTJ7v2VhsewUwsUUshqMU30Q-wnYkmm6_s7JA1Yr6dJ6A0foV2zbZYF0_Br8fdmIZQ_VhjvRVXPEutWwQWb60qH78LQO0BfERMvlTxJfDXotc1Kmst8qWLgZkMPQcLCynaRLDrR4bzQ_J6reExM-LZDt7MifEWhEjgjufiiDFq1ps7d1lHne4p8IwDSn6uX4KE5H3Lv34w64ox-3RYDle49g9ygHfMhcjcwrMOA3fzT6TDWWGsuCxrtM-sXLqRg1m-pwmFX"
+              />
+            </div>
+          </div>
+          <div>
+            <h2
+              class="font-headline font-extrabold text-5xl mb-12 text-on-surface"
+            >
+              BEYOND THE <span class="text-primary">STANDARD</span>
+            </h2>
+            <div class="space-y-8">
+              <div class="flex gap-6 items-start">
+                <div
+                  class="w-16 h-16 rounded-lg bg-surface-bright flex items-center justify-center flex-shrink-0 text-primary"
+                >
+                  <span
+                    class="material-symbols-outlined text-3xl"
+                    data-icon="bolt"
+                    data-weight="fill"
+                    >bolt</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-headline font-bold text-xl mb-2">
+                    High-Energy Atmosphere
+                  </h4>
+                  <p class="font-body text-on-surface-variant">
+                    Our environment is engineered to trigger focus and
+                    adrenaline through immersive sound and lighting.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <div
+                  class="w-16 h-16 rounded-lg bg-surface-bright flex items-center justify-center flex-shrink-0 text-secondary"
+                >
+                  <span
+                    class="material-symbols-outlined text-3xl"
+                    data-icon="monitoring"
+                    data-weight="fill"
+                    >monitoring</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-headline font-bold text-xl mb-2">
+                    Biometric Tracking
+                  </h4>
+                  <p class="font-body text-on-surface-variant">
+                    Real-time performance metrics synced to our mobile app to
+                    track every calorie and heartbeat.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <div
+                  class="w-16 h-16 rounded-lg bg-surface-bright flex items-center justify-center flex-shrink-0 text-primary"
+                >
+                  <span
+                    class="material-symbols-outlined text-3xl"
+                    data-icon="nutrition"
+                    data-weight="fill"
+                    >nutrition</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-headline font-bold text-xl mb-2">
+                    Elite Recovery Zone
+                  </h4>
+                  <p class="font-body text-on-surface-variant">
+                    Cryotherapy, infrared saunas, and personalized nutrition
+                    plans to ensure optimal results.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Trainers Section -->
+      <section class="py-24 px-12 bg-surface overflow-hidden">
+        <div class="text-center mb-16">
+          <span
+            class="font-label text-secondary font-bold tracking-widest uppercase mb-4 block"
+            >Meet the Architects</span
+          >
+          <h2 class="font-headline font-extrabold text-5xl text-on-surface">
+            ELITE COACHING STAFF
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <!-- Trainer Card 1 -->
+          <div
+            class="group relative surface-container rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2"
+          >
+            <img
+              class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              data-alt="Professional male fitness trainer with athletic build and focused expression in a dark gym setting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-zwDiBSrxc-Dv0tWJ-l1_wrJ-6VBQnKqVX6gI2jpzTodVbNLmOBQ7ZXAPAG2wXuhWEKtPuPDI6cuGAss8GJNdM05B9T7roBc_NYliPW1P-S71PMsPZa99fd_UFinWUslOCyKAY4_Ji23hAOjtSNCUMHpQOMj9DHMPlnHY-48cRKJhcNgUVdEAgG0_iqdPN5zh3y_jLdSMryHjjz924vxd5bDgdCHZFDmdmzphFqMs3fgkm1F7i97rjR-5W9W2icZhx92zQ_9cHvbT"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-0 left-0 w-full p-8">
+              <h4 class="font-headline font-bold text-2xl mb-1">
+                MARCUS VANCE
+              </h4>
+              <p
+                class="font-body text-primary text-sm font-semibold mb-4 tracking-widest uppercase"
+              >
+                Lead Strength Coach
+              </p>
+              <div class="flex gap-4 border-t border-outline-variant/30 pt-4">
+                <div class="text-center">
+                  <span class="block font-headline font-bold text-lg">12+</span>
+                  <span class="text-[10px] text-on-surface-variant uppercase"
+                    >Exp Years</span
+                  >
+                </div>
+                <div
+                  class="text-center border-l border-outline-variant/30 pl-4"
+                >
+                  <span class="block font-headline font-bold text-lg">98%</span>
+                  <span class="text-[10px] text-on-surface-variant uppercase"
+                    >Success</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Trainer Card 2 -->
+          <div
+            class="group relative surface-container rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2"
+          >
+            <img
+              class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              data-alt="Powerful female fitness coach standing confidently with crossed arms in a neon-lit HIIT studio"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVfS7iT1HoWEk-79FOWStxVoXi3cBZkxDRHfkmxhHXfpHjZVNcqtDBptmi2ZiivIMlOneKu6qj2bx1iliIfTuxSJKHTswv7m8p4UNAuZe0os5DQlsaE6UBAiGnsztQcj2Z0Hl8MY-8HWcilGMPEUcZp9EKFwCTzdJOP8JO94LDV-nG9aVb2Yglm4nMTb88RkjG1k13A9vWVV2gJrSxkzqrrMfkN8TJXmzEp61QVu16YoZrQjADGWlpaZBQu9Uipvh7eIAD8zJ8u6mA"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-0 left-0 w-full p-8">
+              <h4 class="font-headline font-bold text-2xl mb-1">
+                ELENA RODRIGUEZ
+              </h4>
+              <p
+                class="font-body text-secondary text-sm font-semibold mb-4 tracking-widest uppercase"
+              >
+                HIIT Specialist
+              </p>
+              <div class="flex gap-4 border-t border-outline-variant/30 pt-4">
+                <div class="text-center">
+                  <span class="block font-headline font-bold text-lg">8+</span>
+                  <span class="text-[10px] text-on-surface-variant uppercase"
+                    >Exp Years</span
+                  >
+                </div>
+                <div
+                  class="text-center border-l border-outline-variant/30 pl-4"
+                >
+                  <span class="block font-headline font-bold text-lg"
+                    >450+</span
+                  >
+                  <span class="text-[10px] text-on-surface-variant uppercase"
+                    >Clients</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Trainer Card 3 -->
+          <div
+            class="group relative surface-container rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2"
+          >
+            <img
+              class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              data-alt="Muscular trainer demonstrating weightlifting technique with intense focus in a premium fitness environment"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn1PFl5iSOxn-xvRZU6C6Wz13KqnWHOSz6OcIrJAmyLE5fDHApu7z2zg3RnGl3bywyqVlPftzSl-adDGRHyNrJsYWDKi4yAue5lO3jZxKilHcU-aD821BUPY9j92MB9SMdseGhDDldeVrGtSAn0CW80AnqfYEaTJ4xPmayvHDkVzIx5njJ0k7y6EImW4mX_nNhbYaNj-oFGY-O3_ayyjgu0sCD00pJUB4gk_VQNquXD19Qd5Uk0KCPAC-LpqlIrTe5sKyGlPjEGpEz"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-0 left-0 w-full p-8">
+              <h4 class="font-headline font-bold text-2xl mb-1">DAVID CHEN</h4>
+              <p
+                class="font-body text-primary text-sm font-semibold mb-4 tracking-widest uppercase"
+              >
+                Olympic Lifting
+              </p>
+              <div class="flex gap-4 border-t border-outline-variant/30 pt-4">
+                <div class="text-center">
+                  <span class="block font-headline font-bold text-lg">15+</span>
+                  <span class="text-[10px] text-on-surface-variant uppercase"
+                    >Exp Years</span
+                  >
+                </div>
+                <div
+                  class="text-center border-l border-outline-variant/30 pl-4"
+                >
+                  <span class="block font-headline font-bold text-lg"
+                    >10k+</span
+                  >
+                  <span class="text-[10px] text-on-surface-variant uppercase"
+                    >Sessions</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-24 px-12">
+        <div
+          class="max-w-7xl mx-auto rounded-lg overflow-hidden bg-gradient-to-br from-surface-container to-surface-dim p-16 text-center border border-outline-variant/20 relative"
+        >
+          <div
+            class="absolute top-0 right-0 p-10 opacity-10 pointer-events-none"
+          >
+            <span
+              class="material-symbols-outlined text-[200px]"
+              data-icon="fitness_center"
+              >fitness_center</span
+            >
+          </div>
+          <h2 class="font-headline font-black text-6xl mb-6 text-on-surface">
+            READY TO PULSE?
+          </h2>
+          <p
+            class="font-body text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto"
+          >
+            Join the stadium today and get your first week of high-performance
+            training for free. Limited spots available for the next intake.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <input
+              class="bg-surface-container-high border-none rounded-xl px-8 py-5 w-full max-w-sm focus:ring-2 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50"
+              placeholder="Enter your email"
+              type="email"
+            />
+            <button
+              class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-12 py-5 rounded-xl font-black text-lg tracking-widest hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all"
+            >
+              CLAIM FREE WEEK
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-[#0e0e0e] dark:bg-[#0e0e0e] rounded-t-[3rem] w-full mt-20 border-t border-outline-variant/10"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 w-full">
+        <div class="space-y-6">
+          <div class="text-xl font-black text-white">peso pesado</div>
+          <p
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 leading-relaxed"
+          >
+            Revolutionizing the fitness experience through atmospheric depth and
+            high-performance technology.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h5
+            class="text-white font-semibold uppercase tracking-widest text-xs mb-2"
+          >
+            Social
+          </h5>
+          <a
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+            href="#"
+            >Instagram</a
+          >
+          <a
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+            href="#"
+            >YouTube</a
+          >
+          <a
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+            href="#"
+            >Facebook</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <h5
+            class="text-white font-semibold uppercase tracking-widest text-xs mb-2"
+          >
+            Company
+          </h5>
+          <a
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+            href="#"
+            >Locations</a
+          >
+          <a
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+            href="#"
+            >Terms</a
+          >
+        </div>
+        <div class="space-y-6">
+          <h5
+            class="text-white font-semibold uppercase tracking-widest text-xs mb-2"
+          >
+            Contact
+          </h5>
+          <p class="font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+            info@neonstadium.com
+          </p>
+          <p class="font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+            +1 (555) NEON-FIT
+          </p>
+          <div class="flex gap-4">
+            <span
+              class="material-symbols-outlined text-gray-400"
+              data-icon="location_on"
+              >location_on</span
+            >
+            <span class="font-['Be_Vietnam_Pro'] text-sm text-gray-400"
+              >123 Electric Ave, Neon City</span
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-16 py-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+          © 2024 peso pesado. THE ELECTRIC PULSE.
+        </div>
+        <div class="flex gap-8">
+          <button
+            class="text-gray-500 hover:text-white transition-all text-sm uppercase tracking-tighter"
+          >
+            Back to top ↑
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

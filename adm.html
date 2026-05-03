@@ -1,0 +1,742 @@
+<!doctype html>
+
+<html class="dark" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Painel Administrativo - Neon Stadium</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#555555",
+              error: "#ff6e84",
+              "tertiary-fixed": "#ff909c",
+              "surface-tint": "#cc97ff",
+              "primary-dim": "#9c48ea",
+              "outline-variant": "#484848",
+              "surface-container-high": "#1f1f1f",
+              "on-background": "#ffffff",
+              "on-surface": "#ffffff",
+              "surface-dim": "#0e0e0e",
+              "error-dim": "#d73357",
+              "tertiary-container": "#fe7e8e",
+              "on-tertiary-fixed-variant": "#711227",
+              "on-primary": "#47007c",
+              "on-primary-fixed": "#000000",
+              "on-primary-fixed-variant": "#430076",
+              outline: "#757575",
+              "on-secondary": "#530b6f",
+              "secondary-container": "#6a2785",
+              "primary-fixed": "#c284ff",
+              "surface-container-lowest": "#000000",
+              "surface-container-low": "#131313",
+              "on-secondary-fixed-variant": "#753290",
+              "surface-container-highest": "#262626",
+              "secondary-fixed-dim": "#ebaeff",
+              surface: "#0e0e0e",
+              tertiary: "#ff95a0",
+              background: "#0e0e0e",
+              "on-secondary-fixed": "#550e71",
+              "on-primary-container": "#360061",
+              "surface-variant": "#262626",
+              "on-tertiary": "#680921",
+              "error-container": "#a70138",
+              "surface-container": "#191919",
+              "on-tertiary-fixed": "#39000d",
+              "on-tertiary-container": "#570018",
+              "on-secondary-container": "#f1bfff",
+              "inverse-primary": "#842cd3",
+              "on-error-container": "#ffb2b9",
+              "on-surface-variant": "#ababab",
+              "secondary-fixed": "#f1c1ff",
+              "tertiary-fixed-dim": "#fa7c8b",
+              primary: "#cc97ff",
+              "primary-fixed-dim": "#b971ff",
+              "surface-bright": "#2c2c2c",
+              "secondary-dim": "#d28aed",
+              "tertiary-dim": "#f47786",
+              "inverse-surface": "#f9f9f9",
+              "primary-container": "#c284ff",
+              "on-error": "#490013",
+              secondary: "#e197fc",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              display: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-headline {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0e0e0e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #262626;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #cc97ff;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-surface antialiased overflow-hidden">
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0px_20px_40px_rgba(168,85,247,0.15)] font-['Plus_Jakarta_Sans'] antialiased"
+    >
+      <div class="text-2xl font-black tracking-tighter text-white">
+        Neon Stadium
+      </div>
+      <nav class="hidden md:flex items-center gap-8">
+        <a
+          class="text-[#cc97ff] font-bold border-b-2 border-[#cc97ff] pb-1"
+          href="#"
+          >Dashboard</a
+        >
+        <a class="text-gray-400 hover:text-white transition-colors" href="#"
+          >Analytics</a
+        >
+        <a class="text-gray-400 hover:text-white transition-colors" href="#"
+          >Reports</a
+        >
+      </nav>
+      <div class="flex items-center gap-6">
+        <div class="relative group hidden lg:block">
+          <span
+            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            >search</span
+          >
+          <input
+            class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-64 transition-all"
+            placeholder="Pesquisar..."
+            type="text"
+          />
+        </div>
+        <div class="flex gap-4">
+          <button
+            class="text-gray-400 hover:text-[#cc97ff] transition-all hover:bg-[#cc97ff]/10 p-2 rounded-full"
+          >
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+          <button
+            class="text-gray-400 hover:text-[#cc97ff] transition-all hover:bg-[#cc97ff]/10 p-2 rounded-full"
+          >
+            <span class="material-symbols-outlined">settings</span>
+          </button>
+        </div>
+        <div class="flex items-center gap-3 ml-2">
+          <img
+            alt="Admin Profile Avatar"
+            class="w-10 h-10 rounded-full border-2 border-primary-dim object-cover"
+            data-alt="Close up portrait of a professional man with modern haircut in dark lighting and neon purple rim light"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr7Q2yUR2ZsRzCDH5vyoyqoDBlcWYpFWP0_-sVWy_0OiQyjUcRHON91j8Lr6DpFXLKdzN-R0lHqO1ZLerVjFlhKKJt8qFCeZdstV-t0dLFxAU1v2y-1WQXSgCpiuNLT_5S_XNb-XwuWjDqpQbWB-pidO72-32J70_-hCohvkIoyMxCpepjMFwIwyLqv8QLsro_JU1-wjrmh_LEF-Ol3w_P6wWf7KzwCV2azdTR7ofxlFSuC_Qpflf23aOArDJpq46MoPSiw2O46QWN"
+          />
+        </div>
+      </div>
+    </header>
+    <div class="flex pt-20 h-screen">
+      <!-- SideNavBar -->
+      <aside
+        class="h-screen w-64 fixed left-0 top-0 border-r border-[#cc97ff]/10 bg-[#0e0e0e] flex flex-col py-6 gap-2 z-40 mt-20"
+      >
+        <div class="px-6 mb-8">
+          <div class="flex items-center gap-3 mb-1">
+            <div class="w-2 h-8 bg-primary rounded-full"></div>
+            <h2
+              class="text-xl font-bold bg-gradient-to-r from-[#9c48ea] to-[#cc97ff] bg-clip-text text-transparent font-['Plus_Jakarta_Sans'] tracking-tight"
+            >
+              Pulse Elite
+            </h2>
+          </div>
+          <p
+            class="text-xs text-gray-500 font-medium px-5 uppercase tracking-widest"
+          >
+            Management Hub
+          </p>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a
+            class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#2c2c2c] transition-all rounded-full"
+            href="#"
+          >
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-medium">Overview</span>
+          </a>
+          <a
+            class="flex items-center gap-3 bg-[#cc97ff]/10 text-[#cc97ff] rounded-full px-4 py-3 mx-2 translate-x-1 duration-300"
+            href="#"
+          >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >group</span
+            >
+            <span class="font-medium">Students</span>
+          </a>
+          <a
+            class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#2c2c2c] transition-all rounded-full"
+            href="#"
+          >
+            <span class="material-symbols-outlined">fitness_center</span>
+            <span class="font-medium">Trainers</span>
+          </a>
+          <a
+            class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#2c2c2c] transition-all rounded-full"
+            href="#"
+          >
+            <span class="material-symbols-outlined"
+              >settings_input_component</span
+            >
+            <span class="font-medium">Equipment</span>
+          </a>
+          <a
+            class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#2c2c2c] transition-all rounded-full"
+            href="#"
+          >
+            <span class="material-symbols-outlined">payments</span>
+            <span class="font-medium">Subscription</span>
+          </a>
+        </nav>
+        <div class="mt-auto px-4 pb-12">
+          <button
+            class="w-full bg-gradient-to-br from-primary-dim to-primary text-on-primary py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(204,151,255,0.3)] hover:scale-[1.02] active:scale-95 transition-all"
+          >
+            <span class="material-symbols-outlined">add</span>
+            Add New Student
+          </button>
+        </div>
+      </aside>
+      <!-- Main Content Canvas -->
+      <main class="ml-64 flex-1 p-8 overflow-y-auto">
+        <div class="max-w-7xl mx-auto">
+          <header class="mb-10 flex justify-between items-end">
+            <div>
+              <h1 class="text-4xl font-extrabold tracking-tight mb-2">
+                Painel Administrativo - Neon Stadium
+              </h1>
+              <p class="text-on-surface-variant text-lg">
+                Gerencie seus alunos e acompanhe o desempenho da unidade.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <div
+                class="bg-surface-container-low px-6 py-3 rounded-lg flex flex-col"
+              >
+                <span
+                  class="text-xs text-on-surface-variant font-bold uppercase tracking-widest"
+                  >Total Alunos</span
+                >
+                <span class="text-2xl font-black text-primary">1,284</span>
+              </div>
+              <div
+                class="bg-surface-container-low px-6 py-3 rounded-lg flex flex-col"
+              >
+                <span
+                  class="text-xs text-on-surface-variant font-bold uppercase tracking-widest"
+                  >Ativos Hoje</span
+                >
+                <span class="text-2xl font-black text-secondary">842</span>
+              </div>
+            </div>
+          </header>
+          <!-- Spreadsheet Data Table -->
+          <div
+            class="bg-surface-container-low rounded-lg overflow-hidden shadow-2xl relative"
+          >
+            <!-- Table Header Decoration -->
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-dim via-secondary to-primary-dim"
+            ></div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr
+                    class="bg-surface-container-high/50 border-b border-white/5"
+                  >
+                    <th
+                      class="px-6 py-5 text-sm font-bold text-on-surface-variant uppercase tracking-wider"
+                    >
+                      Student Name
+                    </th>
+                    <th
+                      class="px-6 py-5 text-sm font-bold text-on-surface-variant uppercase tracking-wider"
+                    >
+                      CPF
+                    </th>
+                    <th
+                      class="px-6 py-5 text-sm font-bold text-on-surface-variant uppercase tracking-wider"
+                    >
+                      Phone
+                    </th>
+                    <th
+                      class="px-6 py-5 text-sm font-bold text-on-surface-variant uppercase tracking-wider"
+                    >
+                      Plan
+                    </th>
+                    <th
+                      class="px-6 py-5 text-sm font-bold text-on-surface-variant uppercase tracking-wider"
+                    >
+                      Status
+                    </th>
+                    <th
+                      class="px-6 py-5 text-sm font-bold text-on-surface-variant uppercase tracking-wider text-right"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5">
+                  <!-- Row 1 -->
+                  <tr
+                    class="group hover:bg-surface-bright transition-all duration-300"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors"
+                        >
+                          <img
+                            alt="Student Avatar"
+                            class="w-full h-full object-cover"
+                            data-alt="Young athletic woman with neon lighting background looking confident"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgIaDct5Ybn05xs83O7sYixlCmugWtmC0HUBuyqDeaK3Ymw04ZRH3kRnYf0YxmxXkBpqQ6SwtRkAKB4C29X3OWeXIrlcWyXz-57DxElINh-8ABi_-rh-gb7KzQb13osjTHk8RjDJZPkxBJzQZPe2eaC6rVRSMFQIyBSY7DpeKS3GxcZ3rvzm3qsGTpwIUJkfhBNzI3xVPCWTrKd5YxBiEslyMwIMdt4RUQGQLOVg5tuomQTjBn-6NTkoEJR8PGHl_rjRRwRx5yvo0-"
+                          />
+                        </div>
+                        <div>
+                          <p class="font-bold text-on-surface">
+                            Mariana Almeida
+                          </p>
+                          <p class="text-xs text-on-surface-variant">
+                            mariana.almeida@email.com
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      123.456.789-00
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      (11) 98765-4321
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter bg-primary/10 text-primary border border-primary/20"
+                        >Elite</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="w-2 h-2 rounded-full bg-[#00ff88] shadow-[0_0_8px_#00ff88]"
+                        ></div>
+                        <span class="text-sm font-semibold text-on-surface"
+                          >Ativo</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="p-2 rounded-lg hover:bg-primary/20 text-on-surface-variant hover:text-primary transition-all"
+                      >
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr
+                    class="group hover:bg-surface-bright transition-all duration-300"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors"
+                        >
+                          <img
+                            alt="Student Avatar"
+                            class="w-full h-full object-cover"
+                            data-alt="Portrait of a muscular man in a gym setting with dramatic shadows and purple accent lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2WIhW8FRJHhJ8zGvNpdWc_wvn4QbP53ScIHqAU4cB70muxYXmvuHj5npDP2_qJxrOApD6qm6A8RIEhDSqbzJ8l5ZYlr2VgngwUv3EANGrgmZZl6eW_ofjTLQvPm3A9QcNFzaxr2aQDxLsMtF6yr1bzC6DiYrzkPA9VkdDKqWU758k8ToQK5I68DWZaYM6DJNOw5XP-lIpu8TbG3egwojSMf8w4KrONGFAexMbcSnimi5J6ekAgEoQOquq0UQL37crZ5vQF_HD9jYb"
+                          />
+                        </div>
+                        <div>
+                          <p class="font-bold text-on-surface">
+                            Rodrigo Santos
+                          </p>
+                          <p class="text-xs text-on-surface-variant">
+                            rodrigo.santos@email.com
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      234.567.890-11
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      (11) 97654-3210
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter bg-secondary/10 text-secondary border border-secondary/20"
+                        >Pro</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="w-2 h-2 rounded-full bg-[#00ff88] shadow-[0_0_8px_#00ff88]"
+                        ></div>
+                        <span class="text-sm font-semibold text-on-surface"
+                          >Ativo</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="p-2 rounded-lg hover:bg-primary/20 text-on-surface-variant hover:text-primary transition-all"
+                      >
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 3 -->
+                  <tr
+                    class="group hover:bg-surface-bright transition-all duration-300"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors"
+                        >
+                          <img
+                            alt="Student Avatar"
+                            class="w-full h-full object-cover"
+                            data-alt="Young woman with headphones in a dark fitness center with vibrant pink and purple neon tubes in the background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6X1KtRsKb6eGQ2L7BguedrXNfC23HkB0x6CZpcGTODhUkkPokKPluCtssEVWedCntXe0gvuQ783IkvS-P3Yguttryl9kees1Ria7UpvOpNuWfGNxkF-HnGJGtavmee2dsqb7ByjZ17n9KWmV66cHE8EGXerTSlcd2o3x5dt2spmuzZetCFgfd7eJb7C_kbsHnYeSaSP8QztDDmiu3IG4tdq9ZCRgrxwpb0CiWIN8_OgBnfPZHM-MJD5INboaxjVmjV0B4hJ-bCSal"
+                          />
+                        </div>
+                        <div>
+                          <p class="font-bold text-on-surface">Julia Mendes</p>
+                          <p class="text-xs text-on-surface-variant">
+                            julia.mendes@email.com
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      345.678.901-22
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      (11) 96543-2109
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter bg-on-surface-variant/10 text-on-surface-variant border border-on-surface-variant/20"
+                        >Starter</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="w-2 h-2 rounded-full bg-error shadow-[0_0_8px_rgba(255,110,132,0.6)]"
+                        ></div>
+                        <span class="text-sm font-semibold text-on-surface"
+                          >Inativo</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="p-2 rounded-lg hover:bg-primary/20 text-on-surface-variant hover:text-primary transition-all"
+                      >
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 4 -->
+                  <tr
+                    class="group hover:bg-surface-bright transition-all duration-300"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors"
+                        >
+                          <img
+                            alt="Student Avatar"
+                            class="w-full h-full object-cover"
+                            data-alt="Fit male athlete looking at camera in a dark high-tech training facility with blue and purple glowing lights"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9e_MTBfi9iOTpJ3xKYeZaH6457Flqm3o293wmZCYoR2XlaDwnOKnGPk5kVVd9FIGtKWZea2fLCFOWF-h-cEiFYFM_1v-QGcfJa-0EG_zLMyulvKXHvvqBPn-wCnMxddCqm9uTj4fjst2fd5cYoRZz-cY14ZYmieL786zRdpEvrUP_IgAH4xijLq0R9mR97biSk8nWQg4QbRwq5UNSv06XSEB1OOwXZETtyuOAUWTydx8-kqAoUkQqr8D_SLTlYHUAXVE0kal7IBRb"
+                          />
+                        </div>
+                        <div>
+                          <p class="font-bold text-on-surface">
+                            Lucas Oliveira
+                          </p>
+                          <p class="text-xs text-on-surface-variant">
+                            lucas.oliveira@email.com
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      456.789.012-33
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      (11) 95432-1098
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter bg-primary/10 text-primary border border-primary/20"
+                        >Elite</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="w-2 h-2 rounded-full bg-[#00ff88] shadow-[0_0_8px_#00ff88]"
+                        ></div>
+                        <span class="text-sm font-semibold text-on-surface"
+                          >Ativo</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="p-2 rounded-lg hover:bg-primary/20 text-on-surface-variant hover:text-primary transition-all"
+                      >
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 5 -->
+                  <tr
+                    class="group hover:bg-surface-bright transition-all duration-300 border-none"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors"
+                        >
+                          <img
+                            alt="Student Avatar"
+                            class="w-full h-full object-cover"
+                            data-alt="Confident woman in gym gear with a subtle smile in moody athletic studio lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1UVZqRa0AxsloCdFuVnvYSfJxL3aVYrTizKF9KjnaGL5MEw7tz0lo5fhjmt1bSnZBeicBXM4LLk-sv2eFMhaaul_fKtUGva6hT7uIxEUZ4PYO00eDS-nbkNeQwlQCph1tK7yz7kockASNhc_cMntKdpnd_gQK45TCWThBFl2OfOp9j3j1yD8qAVBQNwBLLe9w0kQKGujlKXwtVwZdmkDqpNMh-zWckQ0tO40pyFkVqsBBIo93r-tlr4t2rvEhZnbAruVQexPyTTzr"
+                          />
+                        </div>
+                        <div>
+                          <p class="font-bold text-on-surface">Ana Paula Vaz</p>
+                          <p class="text-xs text-on-surface-variant">
+                            anap.vaz@email.com
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      567.890.123-44
+                    </td>
+                    <td class="px-6 py-4 text-on-surface-variant font-medium">
+                      (11) 94321-0987
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter bg-secondary/10 text-secondary border border-secondary/20"
+                        >Pro</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="w-2 h-2 rounded-full bg-[#00ff88] shadow-[0_0_8px_#00ff88]"
+                        ></div>
+                        <span class="text-sm font-semibold text-on-surface"
+                          >Ativo</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="p-2 rounded-lg hover:bg-primary/20 text-on-surface-variant hover:text-primary transition-all"
+                      >
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Pagination / Footer -->
+            <div
+              class="px-6 py-4 bg-surface-container-high/50 flex justify-between items-center border-t border-white/5"
+            >
+              <span class="text-sm text-on-surface-variant"
+                >Showing 1 to 5 of 1,284 students</span
+              >
+              <div class="flex gap-2">
+                <button
+                  class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface hover:bg-primary-dim hover:text-white transition-all"
+                >
+                  <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button
+                  class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold shadow-[0_0_15px_rgba(204,151,255,0.4)]"
+                >
+                  1
+                </button>
+                <button
+                  class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface hover:bg-primary-dim hover:text-white transition-all font-bold"
+                >
+                  2
+                </button>
+                <button
+                  class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface hover:bg-primary-dim hover:text-white transition-all font-bold"
+                >
+                  3
+                </button>
+                <button
+                  class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface hover:bg-primary-dim hover:text-white transition-all"
+                >
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Bento Quick Stats Bottom -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-12">
+            <div
+              class="bg-surface-container rounded-lg p-6 flex items-center gap-4 relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 p-4 opacity-10 scale-150 group-hover:scale-125 transition-transform duration-500"
+              >
+                <span class="material-symbols-outlined text-primary text-6xl"
+                  >trending_up</span
+                >
+              </div>
+              <div
+                class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >payments</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="text-on-surface-variant text-sm font-bold uppercase tracking-widest"
+                >
+                  Receita Mensal
+                </h3>
+                <p class="text-2xl font-black text-white">R$ 142.400</p>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container rounded-lg p-6 flex items-center gap-4 relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 p-4 opacity-10 scale-150 group-hover:scale-125 transition-transform duration-500"
+              >
+                <span class="material-symbols-outlined text-secondary text-6xl"
+                  >person_add</span
+                >
+              </div>
+              <div
+                class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center text-secondary"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >group_add</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="text-on-surface-variant text-sm font-bold uppercase tracking-widest"
+                >
+                  Novas Matrículas
+                </h3>
+                <p class="text-2xl font-black text-white">+12%</p>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container rounded-lg p-6 flex items-center gap-4 relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 p-4 opacity-10 scale-150 group-hover:scale-125 transition-transform duration-500"
+              >
+                <span class="material-symbols-outlined text-error text-6xl"
+                  >warning</span
+                >
+              </div>
+              <div
+                class="w-14 h-14 rounded-full bg-error/20 flex items-center justify-center text-error"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >sync_problem</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="text-on-surface-variant text-sm font-bold uppercase tracking-widest"
+                >
+                  Pendências
+                </h3>
+                <p class="text-2xl font-black text-white">14</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Floating Action Button (FAB) - Suppression Logic: Hide on dashboard if list is primary, but gym dashboard usually benefits from quick add -->
+    <button
+      class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-[0_10px_30px_rgba(204,151,255,0.5)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50"
+    >
+      <span class="material-symbols-outlined text-3xl">add</span>
+    </button>
+  </body>
+</html>

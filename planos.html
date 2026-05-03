@@ -1,0 +1,557 @@
+<!doctype html>
+
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PESO PESADO - Planos e Preços</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "surface-variant": "#262626",
+              "surface-container": "#191919",
+              "surface-container-low": "#131313",
+              "on-secondary-container": "#f1bfff",
+              "on-secondary": "#530b6f",
+              "tertiary-fixed-dim": "#fa7c8b",
+              "on-surface-variant": "#ababab",
+              "secondary-fixed-dim": "#ebaeff",
+              tertiary: "#ff95a0",
+              "inverse-surface": "#f9f9f9",
+              "surface-container-highest": "#262626",
+              "primary-container": "#c284ff",
+              "primary-dim": "#9c48ea",
+              "outline-variant": "#484848",
+              error: "#ff6e84",
+              "secondary-fixed": "#f1c1ff",
+              "secondary-dim": "#d28aed",
+              "inverse-primary": "#842cd3",
+              "tertiary-fixed": "#ff909c",
+              "inverse-on-surface": "#555555",
+              "surface-dim": "#0e0e0e",
+              "secondary-container": "#6a2785",
+              "on-primary-fixed-variant": "#430076",
+              "on-primary-container": "#360061",
+              "tertiary-container": "#fe7e8e",
+              "on-secondary-fixed": "#550e71",
+              "on-primary": "#47007c",
+              "on-tertiary-fixed": "#39000d",
+              background: "#0e0e0e",
+              "error-dim": "#d73357",
+              "on-error": "#490013",
+              "surface-container-high": "#1f1f1f",
+              "on-tertiary": "#680921",
+              "error-container": "#a70138",
+              "on-primary-fixed": "#000000",
+              primary: "#cc97ff",
+              "primary-fixed-dim": "#b971ff",
+              "on-tertiary-container": "#570018",
+              surface: "#0e0e0e",
+              outline: "#757575",
+              "on-secondary-fixed-variant": "#753290",
+              "tertiary-dim": "#f47786",
+              "surface-bright": "#2c2c2c",
+              "on-error-container": "#ffb2b9",
+              "on-surface": "#ffffff",
+              "surface-container-lowest": "#000000",
+              "on-tertiary-fixed-variant": "#711227",
+              "primary-fixed": "#c284ff",
+              "surface-tint": "#cc97ff",
+              secondary: "#e197fc",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-card {
+        background: rgba(25, 25, 25, 0.6);
+        backdrop-filter: blur(24px);
+      }
+      .neon-glow-primary {
+        box-shadow: 0px 20px 40px rgba(168, 85, 247, 0.15);
+      }
+      .pro-highlight {
+        box-shadow: 0 0 50px rgba(204, 151, 255, 0.25);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl shadow-[0px_20px_40px_rgba(168,85,247,0.15)] px-12 py-4 flex justify-between items-center max-w-full mx-auto"
+    >
+      <div class="flex items-center gap-4">
+      <div
+        class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
+      >
+        peso pesado
+      </div>
+      
+        <img height="64px" width="64px" src="/img/icon-gym-white1.png" alt="#" />
+      </div>
+      <div
+        class="hidden md:flex items-center gap-10 font-headline font-bold tracking-tight"
+      >
+        <a
+          class="text-gray-400 hover:text-white transition-colors"
+          href="/index.html"
+          >Home</a
+        >
+        <a class="text-gray-400 hover:text-white transition-colors" href="#"
+          >Classes</a
+        >
+        <a class="text-gray-400 hover:text-white transition-colors" href="#"
+          >Trainers</a
+        >
+        <a class="text-[#cc97ff] border-b-2 border-[#cc97ff] pb-1" href="#"
+          >Planos</a
+        >
+      </div>
+      <a
+        class="bg-gradient-to-br from-primary-dim to-primary text-on-primary-fixed font-headline font-extrabold px-8 py-3 rounded-xl hover:scale-105 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all active:scale-95 duration-200"
+        href="/login.html"
+      >
+        Fazer Login
+      </a>
+    </nav>
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+      <!-- Hero Section -->
+      <header class="text-center mb-24 relative">
+        <div
+          class="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10"
+        ></div>
+        <h1
+          class="font-headline font-extrabold text-6xl md:text-8xl tracking-tighter mb-6 uppercase text-white"
+        >
+          ESCOLHA SEU
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            >PLANO</span
+          >
+        </h1>
+        <p
+          class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed"
+        >
+          Supere seus limites na arena mais tecnológica do país. Treinos de alta
+          performance com a energia vibrante do neon.
+        </p>
+      </header>
+      <!-- Pricing Bento/Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
+        <!-- Starter Card -->
+        <div
+          class="bg-surface-container rounded-lg p-10 flex flex-col h-fit border border-white/5 transition-all hover:translate-y-[-8px]"
+        >
+          <div class="mb-8">
+            <span
+              class="text-secondary font-headline font-bold tracking-widest text-xs uppercase"
+              >Básico</span
+            >
+            <h2 class="text-4xl font-headline font-black mt-2">Starter</h2>
+          </div>
+          <div class="mb-10">
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-headline font-black">R$99</span>
+              <span class="text-on-surface-variant">/mês</span>
+            </div>
+          </div>
+          <ul class="space-y-6 mb-12 flex-grow">
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="check"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >check</span
+                >
+              </div>
+              <span>Acesso à arena principal</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="check"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >check</span
+                >
+              </div>
+              <span>Equipamentos Smart-Grip</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="check"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >check</span
+                >
+              </div>
+              <span>Vestiários Premium</span>
+            </li>
+          </ul>
+          <button
+            class="w-full py-4 rounded-xl font-headline font-bold bg-surface-bright text-primary border border-primary/20 hover:bg-primary hover:text-on-primary transition-all"
+          >
+            COMEÇAR AGORA
+          </button>
+        </div>
+        <!-- Pro Card (Highlighted) -->
+        <div
+          class="bg-surface-container-high rounded-lg p-12 flex flex-col h-full pro-highlight border-2 border-primary/30 relative overflow-hidden transition-all hover:translate-y-[-8px] scale-105 z-10"
+        >
+          <div
+            class="absolute top-0 right-0 bg-primary text-on-primary px-6 py-2 rounded-bl-2xl font-headline font-bold text-xs uppercase tracking-widest"
+          >
+            MAIS POPULAR
+          </div>
+          <div class="mb-8">
+            <span
+              class="text-secondary font-headline font-bold tracking-widest text-xs uppercase"
+              >Performance</span
+            >
+            <h2 class="text-5xl font-headline font-black mt-2">Pro</h2>
+          </div>
+          <div class="mb-10">
+            <div class="flex items-baseline gap-1">
+              <span class="text-6xl font-headline font-black">R$159</span>
+              <span class="text-on-surface-variant">/mês</span>
+            </div>
+            <p class="text-primary text-sm mt-2 font-medium italic">
+              O equilíbrio perfeito entre força e tecnologia
+            </p>
+          </div>
+          <ul class="space-y-6 mb-12 flex-grow">
+            <li class="flex items-center gap-4 text-on-surface">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="bolt"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >bolt</span
+                >
+              </div>
+              <span class="font-medium">Tudo do Plano Starter</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="group"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >group</span
+                >
+              </div>
+              <span class="font-medium">Classes de HIIT Ilimitadas</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="monitoring"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >monitoring</span
+                >
+              </div>
+              <span class="font-medium">Avaliação Biométrica Mensal</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="water_drop"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >water_drop</span
+                >
+              </div>
+              <span class="font-medium">Nutrição &amp; Recovery Lounge</span>
+            </li>
+          </ul>
+          <button
+            class="w-full py-5 rounded-xl font-headline font-black bg-gradient-to-r from-primary-dim to-primary text-on-primary-fixed shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all"
+          >
+            SELECIONAR PRO
+          </button>
+        </div>
+        <!-- Elite Card -->
+        <div
+          class="bg-surface-container rounded-lg p-10 flex flex-col h-fit border border-white/5 transition-all hover:translate-y-[-8px]"
+        >
+          <div class="mb-8">
+            <span
+              class="text-secondary font-headline font-bold tracking-widest text-xs uppercase"
+              >Exclusivo</span
+            >
+            <h2 class="text-4xl font-headline font-black mt-2">Elite</h2>
+          </div>
+          <div class="mb-10">
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-headline font-black">R$299</span>
+              <span class="text-on-surface-variant">/mês</span>
+            </div>
+          </div>
+          <ul class="space-y-6 mb-12 flex-grow">
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="star"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <span>Tudo do Plano Pro</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="person_celebrate"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >person_celebrate</span
+                >
+              </div>
+              <span>Personal Trainer Dedicado</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="spa"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >spa</span
+                >
+              </div>
+              <span>Acesso ao VIP Recovery SPA</span>
+            </li>
+            <li class="flex items-center gap-4 text-on-surface-variant">
+              <div
+                class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="local_parking"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >local_parking</span
+                >
+              </div>
+              <span>Estacionamento VIP</span>
+            </li>
+          </ul>
+          <button
+            class="w-full py-4 rounded-xl font-headline font-bold bg-surface-bright text-primary border border-primary/20 hover:bg-primary hover:text-on-primary transition-all"
+          >
+            SEJA ELITE
+          </button>
+        </div>
+      </div>
+      <!-- Secondary Info Grid -->
+      <section class="mt-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-surface-container-low rounded-lg p-10 flex gap-8 items-center border border-outline-variant/10"
+        >
+          <div class="w-24 h-24 shrink-0 rounded-2xl overflow-hidden">
+            <img
+              class="w-full h-full object-cover"
+              data-alt="close-up of a high-tech gym weight selection dial with glowing purple numbers and sleek black metallic finish"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_AqI907r-SiKRnPoGCntFid_gzGohbthysT8vmQEQn5nzTthNRUPed3hkdJ23TEqsAAlYf7W23WZ_XK9b_6W1S5EK6h5De2FsicSjRolPmb4C_jMO-XOy2in5OT0hBhPKnbLG_iQ8fwvSXpWIfnjOR8z5m6Jfme15FauWznCjpTzaKr85G9A5U68DMJoogEA5PryfV6n8oxGI_MMRBk-JLdy8MMnEA28L_YiIvqS4VncSW6nHOULyV3z-CY-jvJUdqR9tB21NDaqR"
+            />
+          </div>
+          <div>
+            <h3 class="font-headline font-bold text-xl mb-2">
+              Sem Taxas de Matrícula
+            </h3>
+            <p class="text-on-surface-variant text-sm">
+              Acreditamos na transparência. O que você vê é o que você paga, sem
+              letras miúdas ou surpresas no final do mês.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-low rounded-lg p-10 flex gap-8 items-center border border-outline-variant/10"
+        >
+          <div class="w-24 h-24 shrink-0 rounded-2xl overflow-hidden">
+            <img
+              class="w-full h-full object-cover"
+              data-alt="modern neon-lit gym interior with rows of treadmills reflecting vibrant purple and blue ambient lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3_0-pNwLb_fWCSHUABS8DDULgEnhrKK94PdCTcO9Z_kaPlc_jXGe2kP4WKDwN_AMZRN8djex3AbCuzsWQaoKEth9kgJzqJ5EuN64CDDnsXgvocsgo4mekKC_NW5j2RCpRk7Yd1qpu12YtfxTpdLlzX3TA73cfmxz3qpio5m375YKEs3s5kscjWMu-k-fpcyKX08ROrmK_ncgi_9Dmwqdt-59BfX_dCm40-GRAJAzqjeKPDjFd_xULRvJoNryklEhM_4jHOWeoEZ4f"
+            />
+          </div>
+          <div>
+            <h3 class="font-headline font-bold text-xl mb-2">
+              Garantia Stadium
+            </h3>
+            <p class="text-on-surface-variant text-sm">
+              7 dias para testar nossa estrutura. Se você não sentir a energia,
+              devolvemos seu investimento integralmente.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0e0e0e] rounded-t-[3rem] w-full mt-20 pt-20 pb-12">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 w-full max-w-7xl mx-auto"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div class="text-xl font-black text-white font-headline mb-6">
+            PESO PESADO
+          </div>
+          <p
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 leading-relaxed"
+          >
+            Elevando o padrão do fitness através da tecnologia e atmosfera
+            envolvente. Sinta o pulso elétrico.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-headline font-bold mb-6">Explore</h4>
+          <ul class="space-y-4 font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Locations</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Classes</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Trainers</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Schedule</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-headline font-bold mb-6">Connect</h4>
+          <ul class="space-y-4 font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >TikTok</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-headline font-bold mb-6">Legal</h4>
+          <ul class="space-y-4 font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Terms</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#e197fc] transition-colors" href="#"
+                >Membership Agreement</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-20 pt-8 border-t border-white/5 px-16 text-center w-full max-w-7xl mx-auto"
+      >
+        <p class="font-['Be_Vietnam_Pro'] text-sm text-gray-500">
+          © 2024 PESO PESADO. THE ELECTRIC PULSE.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

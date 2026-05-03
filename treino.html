@@ -1,0 +1,453 @@
+<!doctype html>
+
+<html class="dark" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Área do Aluno - EVOLVE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dim": "#9c48ea",
+              "on-tertiary-container": "#570018",
+              "on-primary-fixed-variant": "#430076",
+              surface: "#0e0e0e",
+              "primary-container": "#c284ff",
+              background: "#0e0e0e",
+              "surface-variant": "#262626",
+              "surface-container-low": "#131313",
+              "on-tertiary": "#680921",
+              "on-error-container": "#ffb2b9",
+              "on-surface-variant": "#ababab",
+              "primary-fixed": "#c284ff",
+              "on-primary": "#47007c",
+              "on-tertiary-fixed": "#39000d",
+              "inverse-surface": "#f9f9f9",
+              "surface-container-lowest": "#000000",
+              "on-error": "#490013",
+              "tertiary-dim": "#f47786",
+              "secondary-fixed": "#f1c1ff",
+              "primary-fixed-dim": "#b971ff",
+              "on-surface": "#ffffff",
+              "on-primary-fixed": "#000000",
+              "secondary-dim": "#d28aed",
+              "on-secondary": "#530b6f",
+              "surface-container-high": "#1f1f1f",
+              "outline-variant": "#484848",
+              outline: "#757575",
+              "secondary-fixed-dim": "#ebaeff",
+              "on-secondary-fixed": "#550e71",
+              "tertiary-fixed": "#ff909c",
+              "on-secondary-container": "#f1bfff",
+              "tertiary-fixed-dim": "#fa7c8b",
+              error: "#ff6e84",
+              "on-tertiary-fixed-variant": "#711227",
+              tertiary: "#ff95a0",
+              "surface-container": "#191919",
+              "on-background": "#ffffff",
+              "surface-dim": "#0e0e0e",
+              "inverse-primary": "#842cd3",
+              "error-container": "#a70138",
+              "surface-bright": "#2c2c2c",
+              "surface-tint": "#cc97ff",
+              "surface-container-highest": "#262626",
+              secondary: "#e197fc",
+              "secondary-container": "#6a2785",
+              primary: "#cc97ff",
+              "inverse-on-surface": "#555555",
+              "tertiary-container": "#fe7e8e",
+              "error-dim": "#d73357",
+              "on-primary-container": "#360061",
+              "on-secondary-fixed-variant": "#753290",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              display: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- TopAppBar -->
+    <header
+      class="bg-zinc-950/60 backdrop-blur-xl docked full-width top-0 sticky z-50 flex justify-between items-center px-6 py-4 w-full shadow-[0px_20px_40px_rgba(168,85,247,0.15)]"
+    >
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden"
+        >
+          <img
+            alt="User Profile"
+            class="w-full h-full object-cover"
+            data-alt="Close up portrait of an athletic young man with sweat on his face, cinematic neon purple side lighting, dark studio background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfXKf0mtaxhTSYN_tG8zPNIlS7tC_3vwLIF5uiR0fz0FopthAAioRp28Q3QMwxER1qENf55hhDSZaq_TsrC2fJ0yMCiaUEI8qtEDE9QmYFApH1j45wt5vEJN48lDOSHi-Ce3-9g_bR7K1xrJrzc_kEBXOeQzamCzX2eIElTJwR6xdrvyvtWrPTDua89EuBS9D5B7aIpdf4qqUTfo_pLY3BXOWFvSW-VPCTpJF4rorD7RoTPC5V7DafVM0RudxAvguZBllU8NV6lzTF"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold"
+            >Bem-vindo</span
+          >
+          <span class="font-headline font-bold tracking-tight text-white"
+            >Lucas Silva</span
+          >
+        </div>
+      </div>
+      <div
+        class="text-xl font-black italic tracking-tighter text-purple-400 font-headline"
+      >
+        EVOLVE
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          class="material-symbols-outlined text-purple-300 hover:text-purple-200 transition-colors scale-95 active:scale-90 transition-transform"
+        >
+          notifications
+        </button>
+      </div>
+    </header>
+    <main class="px-6 py-8 space-y-10 pb-32">
+      <!-- Plan Card (Kinetic Luminescence Aesthetic) -->
+      <section class="relative group">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"
+        ></div>
+        <div
+          class="relative bg-surface-container-high rounded-lg p-6 overflow-hidden"
+        >
+          <!-- Decorative background pulse -->
+          <div
+            class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"
+          ></div>
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <h2
+                class="font-headline font-extrabold text-2xl tracking-tighter text-white mb-1"
+              >
+                Plano Pro
+              </h2>
+              <div class="flex items-center gap-2">
+                <span
+                  class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"
+                ></span>
+                <span
+                  class="text-label text-xs font-semibold text-emerald-400 uppercase tracking-widest"
+                  >Ativo</span
+                >
+              </div>
+            </div>
+            <div class="bg-surface-bright p-3 rounded-full">
+              <span
+                class="material-symbols-outlined text-primary"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >workspace_premium</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-on-surface-variant text-sm font-label uppercase tracking-widest"
+                >Próxima renovação</span
+              >
+              <span class="text-on-surface text-sm font-bold"
+                >12 Out, 2023</span
+              >
+            </div>
+            <button
+              class="w-full py-4 rounded-xl bg-surface-bright text-primary font-bold text-sm uppercase tracking-widest border border-primary/10 hover:border-primary/40 transition-all"
+            >
+              Alterar Plano
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Workout Section -->
+      <section class="space-y-6">
+        <div class="flex items-end justify-between px-1">
+          <h3
+            class="font-headline font-bold text-3xl tracking-tighter text-on-surface"
+          >
+            Treino de Hoje
+          </h3>
+          <span
+            class="text-primary text-xs font-bold uppercase tracking-widest mb-1.5"
+            >Segunda-feira</span
+          >
+        </div>
+        <!-- Horizontal Day Picker -->
+        <div class="flex overflow-x-auto no-scrollbar gap-3 -mx-6 px-6 py-2">
+          <button
+            class="flex-none w-14 h-20 rounded-full flex flex-col items-center justify-center gap-1 bg-gradient-to-b from-primary-dim to-primary text-white shadow-[0px_10px_20px_rgba(168,85,247,0.3)]"
+          >
+            <span class="text-[10px] font-bold opacity-70">SEG</span>
+            <span class="text-lg font-black tracking-tighter">01</span>
+          </button>
+          <button
+            class="flex-none w-14 h-20 rounded-full flex flex-col items-center justify-center gap-1 bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
+          >
+            <span class="text-[10px] font-bold opacity-70">TER</span>
+            <span class="text-lg font-black tracking-tighter">02</span>
+          </button>
+          <button
+            class="flex-none w-14 h-20 rounded-full flex flex-col items-center justify-center gap-1 bg-surface-container text-on-surface-variant"
+          >
+            <span class="text-[10px] font-bold opacity-70">QUA</span>
+            <span class="text-lg font-black tracking-tighter">03</span>
+          </button>
+          <button
+            class="flex-none w-14 h-20 rounded-full flex flex-col items-center justify-center gap-1 bg-surface-container text-on-surface-variant"
+          >
+            <span class="text-[10px] font-bold opacity-70">QUI</span>
+            <span class="text-lg font-black tracking-tighter">04</span>
+          </button>
+          <button
+            class="flex-none w-14 h-20 rounded-full flex flex-col items-center justify-center gap-1 bg-surface-container text-on-surface-variant"
+          >
+            <span class="text-[10px] font-bold opacity-70">SEX</span>
+            <span class="text-lg font-black tracking-tighter">05</span>
+          </button>
+          <button
+            class="flex-none w-14 h-20 rounded-full flex flex-col items-center justify-center gap-1 bg-surface-container text-on-surface-variant"
+          >
+            <span class="text-[10px] font-bold opacity-70">SAB</span>
+            <span class="text-lg font-black tracking-tighter">06</span>
+          </button>
+        </div>
+        <!-- Exercises List -->
+        <div class="space-y-4">
+          <!-- Exercise 1 -->
+          <div
+            class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container-high transition-all"
+          >
+            <div
+              class="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0"
+            >
+              <img
+                alt="Supino Inclinado"
+                class="w-full h-full object-cover"
+                data-alt="Detailed close up of muscular chest during barbell bench press exercise in a dark gym with moody purple lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZG0zRs-bAqDZfT-1mAFO5MaAVuSQkMbW1lT8_5YZuI-W5UQy4lW_GTMQLTahsiPgRr_ZaivfFQDMkENBiei0cP8a-KRLsbETDT4n_SxeXR6xD-0O8ZtZIAzA3U5R1EDgKMwiqVViYBFqBYHrYfeMmw9Jj2OP8l14PHPFB1294uNXTVfZuqHMxnqyoO_LFq-0THtOL0qnn6qViQ0N3IbhNieEhPv4DTSBtigMmZh_iqCEGmunIAcwM2J5aw-9a43hfqviRzCEi5dXZ"
+              />
+              <div class="absolute inset-0 bg-primary/20"></div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-headline font-bold text-white tracking-tight">
+                Supino Inclinado
+              </h4>
+              <div class="flex items-center gap-3 mt-1">
+                <span class="text-primary font-bold text-xs">4 x 10</span>
+                <span
+                  class="text-on-surface-variant text-[10px] uppercase font-label font-bold tracking-widest"
+                  >• Peitoral</span
+                >
+              </div>
+            </div>
+            <button
+              class="material-symbols-outlined text-primary-dim p-2 rounded-full bg-primary/5"
+            >
+              play_circle
+            </button>
+          </div>
+          <!-- Exercise 2 -->
+          <div
+            class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container-high transition-all"
+          >
+            <div
+              class="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0"
+            >
+              <img
+                alt="Crucifixo Reto"
+                class="w-full h-full object-cover"
+                data-alt="Dumbbell fly exercise on a flat bench, focused on the arm and shoulder muscles, dramatic high contrast purple lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLCbZCKsMrs-LqXxOGmfRN9t0OBIG6pOxemTyYq6ewXuEBN26jHwvpg4BRgfE8lqmh_IJwKr6nsQ7Oa5tblxxRLuHSeTldhpKpbM66G20PqltPXi64AmN2bSJs3D5EYENcCypk0p9vlhA17Fpk8Ec9B98dCVG27oPkueyL1NMHWr9MGViekU9m14gJLSKHC-w2eje4e6huaQaNk3useSIspUYLqZ0iqpaucVZ7dmmmSVI7COxNw55I18FpK5yz3XYTGy_RPvUpx9Sg"
+              />
+              <div class="absolute inset-0 bg-primary/20"></div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-headline font-bold text-white tracking-tight">
+                Crucifixo Reto
+              </h4>
+              <div class="flex items-center gap-3 mt-1">
+                <span class="text-primary font-bold text-xs">3 x 12</span>
+                <span
+                  class="text-on-surface-variant text-[10px] uppercase font-label font-bold tracking-widest"
+                  >• Peitoral</span
+                >
+              </div>
+            </div>
+            <button
+              class="material-symbols-outlined text-primary-dim p-2 rounded-full bg-primary/5"
+            >
+              play_circle
+            </button>
+          </div>
+          <!-- Exercise 3 -->
+          <div
+            class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container-high transition-all"
+          >
+            <div
+              class="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0"
+            >
+              <img
+                alt="Tríceps Corda"
+                class="w-full h-full object-cover"
+                data-alt="Athlete performing triceps cable pushdown with rope attachment, glowing purple background, emphasize muscle definition"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZwBaknm94DoBosiKIjSP5Xy3v3sDP7YVbLKPM_8YILKgHIYNWXYOcFYa47k0IHAzeDQ-857FyJwAKLhBs5halvNM_Bwz7IslTe-SvpXhy_hb0CfUyGBnIAvDTCDHEuN9UupEc2WogivuPoFZJ9-4J7YS5htC0oRuUKRdEqpEcDZu9cCuIuK4DTCZ3QY_CxPawxryJVrGzmRXtqg2IiivnHlsuSXxTZoRo7f3nWbjWvZHpvt6Il4y42DsNaXjQ8F_ZwFzI5laF5_R"
+              />
+              <div class="absolute inset-0 bg-primary/20"></div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-headline font-bold text-white tracking-tight">
+                Tríceps Corda
+              </h4>
+              <div class="flex items-center gap-3 mt-1">
+                <span class="text-primary font-bold text-xs">4 x 15</span>
+                <span
+                  class="text-on-surface-variant text-[10px] uppercase font-label font-bold tracking-widest"
+                  >• Braços</span
+                >
+              </div>
+            </div>
+            <button
+              class="material-symbols-outlined text-primary-dim p-2 rounded-full bg-primary/5"
+            >
+              play_circle
+            </button>
+          </div>
+          <!-- Exercise 4 -->
+          <div
+            class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container-high transition-all"
+          >
+            <div
+              class="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0"
+            >
+              <img
+                alt="Elevação Lateral"
+                class="w-full h-full object-cover"
+                data-alt="Side view of woman doing lateral raises with dumbbells, moody cinematic gym lighting with ultraviolet accents"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPqbdeSd-6QpYf8YXq7yEcfpFRtsoAGAwCXbUI9kL4TdFHVxy65rblvZhEyzv77S9iY20XELkfx8iPkwtD49laBDPHe0hfxGoHrOPVjltjvAaHVItUpSSQjDoVfHDS-VPtonjDoZCx_5HJAY6dsXnzcJ5iawpJeFhwhiTyl0hbV6j4L2vKiCCgQ-MqBWC26t1Fu3q9XVg2AwSFhFOkttUMNaGIPvUXnHt3A3PDgL3TZE1a4JXY28SOT7wRv7o2KYJM946Iwdiua0pH"
+              />
+              <div class="absolute inset-0 bg-primary/20"></div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-headline font-bold text-white tracking-tight">
+                Elevação Lateral
+              </h4>
+              <div class="flex items-center gap-3 mt-1">
+                <span class="text-primary font-bold text-xs">3 x 15</span>
+                <span
+                  class="text-on-surface-variant text-[10px] uppercase font-label font-bold tracking-widest"
+                  >• Ombros</span
+                >
+              </div>
+            </div>
+            <button
+              class="material-symbols-outlined text-primary-dim p-2 rounded-full bg-primary/5"
+            >
+              play_circle
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Action -->
+      <button
+        class="w-full py-6 rounded-full bg-gradient-to-r from-primary-dim to-primary text-on-surface font-black text-lg tracking-widest shadow-[0px_20px_40px_rgba(168,85,247,0.3)] active:scale-95 transition-all"
+      >
+        INICIAR TREINO
+      </button>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+      class="fixed bottom-6 left-0 right-0 z-50 flex justify-around items-center px-4 h-20 mx-auto max-w-md bg-zinc-900/60 backdrop-blur-2xl rounded-full w-[90%] shadow-[0px_10px_30px_rgba(168,85,247,0.2)]"
+    >
+      <div
+        class="flex flex-col items-center justify-center bg-gradient-to-tr from-purple-600 to-purple-400 text-white rounded-full px-5 py-2 Active: ring-4 ring-purple-500/30 transition-all duration-300"
+      >
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >home</span
+        >
+        <span
+          class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+          >Home</span
+        >
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+      >
+        <span class="material-symbols-outlined">fitness_center</span>
+        <span
+          class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+          >Workouts</span
+        >
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+      >
+        <span class="material-symbols-outlined">person</span>
+        <span
+          class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+          >Profile</span
+        >
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+      >
+        <span class="material-symbols-outlined">settings</span>
+        <span
+          class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+          >Settings</span
+        >
+      </div>
+    </nav>
+  </body>
+</html>

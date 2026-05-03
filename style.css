@@ -1,0 +1,70 @@
+/* ============================================================
+   CONFIGURAÇÕES GERAIS E CORES DO TEMA
+   ============================================================ */
+:root {
+  --bg-dark: #0e0e0e;
+  --primary-purple: #cc97ff;
+  --secondary-purple: #e197fc;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  margin: 0;
+}
+
+/* Configuração dos ícones do Google Material Design */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* ============================================================
+   EFEITOS VISUAIS (Brilho e Vidro)
+   ============================================================ */
+
+/* Efeito de brilho roxo nos títulos principais */
+.text-glow {
+  text-shadow: 0 0 20px rgba(204, 151, 255, 0.4);
+}
+
+/* Efeito de vidro embaçado (usado em cards e no menu) */
+.glass-card {
+  background: rgba(31, 31, 31, 0.6);
+  backdrop-filter: blur(24px);
+}
+
+/* ============================================================
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+   ============================================================ */
+nav {
+  /* Controla a sombra e o desfoque atrás do menu */
+  box-shadow: 0px 20px 40px rgba(168, 85, 247, 0.15);
+}
+
+/* ============================================================
+   SEÇÕES DO SITE (Hero, Classes, Trainers)
+   ============================================================ */
+
+/* Ajustes para as imagens de fundo não cobrirem o conteúdo */
+section img {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Estilização dos cards estilo 'Bento Grid' */
+.surface-container {
+  background-color: #191919;
+  transition: all 0.3s ease;
+}
+
+/* ============================================================
+   RODAPÉ (FOOTER)
+   ============================================================ */
+footer {
+  border-top: 1px solid rgba(72, 72, 72, 0.3);
+}

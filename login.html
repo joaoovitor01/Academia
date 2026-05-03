@@ -1,0 +1,414 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "surface-variant": "#262626",
+              "surface-container": "#191919",
+              "surface-container-low": "#131313",
+              "on-secondary-container": "#f1bfff",
+              "on-secondary": "#530b6f",
+              "tertiary-fixed-dim": "#fa7c8b",
+              "on-surface-variant": "#ababab",
+              "secondary-fixed-dim": "#ebaeff",
+              tertiary: "#ff95a0",
+              "inverse-surface": "#f9f9f9",
+              "surface-container-highest": "#262626",
+              "primary-container": "#c284ff",
+              "primary-dim": "#9c48ea",
+              "outline-variant": "#484848",
+              error: "#ff6e84",
+              "secondary-fixed": "#f1c1ff",
+              "secondary-dim": "#d28aed",
+              "inverse-primary": "#842cd3",
+              "tertiary-fixed": "#ff909c",
+              "inverse-on-surface": "#555555",
+              "surface-dim": "#0e0e0e",
+              "secondary-container": "#6a2785",
+              "on-primary-fixed-variant": "#430076",
+              "on-primary-container": "#360061",
+              "tertiary-container": "#fe7e8e",
+              "on-secondary-fixed": "#550e71",
+              "on-primary": "#47007c",
+              "on-tertiary-fixed": "#39000d",
+              background: "#0e0e0e",
+              "error-dim": "#d73357",
+              "on-error": "#490013",
+              "surface-container-high": "#1f1f1f",
+              "on-tertiary": "#680921",
+              "error-container": "#a70138",
+              "on-primary-fixed": "#000000",
+              primary: "#cc97ff",
+              "primary-fixed-dim": "#b971ff",
+              "on-tertiary-container": "#570018",
+              surface: "#0e0e0e",
+              outline: "#757575",
+              "on-secondary-fixed-variant": "#753290",
+              "tertiary-dim": "#f47786",
+              "surface-bright": "#2c2c2c",
+              "on-error-container": "#ffb2b9",
+              "on-surface": "#ffffff",
+              "surface-container-lowest": "#000000",
+              "on-tertiary-fixed-variant": "#711227",
+              "primary-fixed": "#c284ff",
+              "surface-tint": "#cc97ff",
+              secondary: "#e197fc",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+      .bg-hero-mesh {
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(204, 151, 255, 0.15) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(156, 72, 234, 0.1) 0%,
+            transparent 40%
+          ),
+          #0e0e0e;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl dark:bg-[#0e0e0e]/60 shadow-[0px_20px_40px_rgba(168,85,247,0.15)] flex justify-between items-center px-12 py-4 max-w-full mx-auto"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
+        >
+          peso pesado
+        </div>
+
+        <img
+          height="64px"
+          width="64px"
+          src="/img/icon-gym-white1.png"
+          alt="#"
+        />
+      </div>
+      <div class="hidden md:flex gap-8 font-headline font-bold tracking-tight">
+        <a
+          class="text-gray-400 hover:text-white transition-colors"
+          href="/index.html"
+          >Home</a
+        >
+        <a class="text-gray-400 hover:text-white transition-colors" href="#"
+          >Classes</a
+        >
+        <a class="text-gray-400 hover:text-white transition-colors" href="#"
+          >Trainers</a
+        >
+        <a
+          class="text-gray-400 hover:text-white transition-colors"
+          href="/planos.html"
+          >Plano</a
+        >
+      </div>
+      <a
+        class="bg-gradient-to-r from-primary-dim to-primary text-on-primary px-8 py-3 rounded-xl font-bold tracking-tight hover:scale-105 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all active:scale-95 duration-200"
+        href="/login.html"
+      >
+        Fazer Login
+      </a>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main
+      class="min-h-screen pt-24 pb-12 flex items-center justify-center bg-hero-mesh relative overflow-hidden"
+    >
+      <!-- Abstract Background Element -->
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-primary-dim/10 rounded-full blur-[120px]"
+      ></div>
+      <div
+        class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px]"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div
+          class="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto"
+        >
+          <!-- Left Content: Branding / Hype -->
+          <div class="hidden lg:block lg:w-1/2 space-y-6">
+            <h1
+              class="font-headline font-extrabold text-7xl leading-tight tracking-tighter text-white"
+            >
+              THE <span class="text-primary italic">ELECTRIC</span><br />PULSE.
+            </h1>
+            <p class="text-on-surface-variant text-xl max-w-md leading-relaxed">
+              Access your performance metrics, upcoming sessions, and
+              personalized training protocols in the stadium.
+            </p>
+            <div class="flex items-center gap-4 pt-4">
+              <div class="flex -space-x-4">
+                <img
+                  class="w-12 h-12 rounded-full border-2 border-surface object-cover"
+                  data-alt="portrait of a focused female athlete in dark gym lighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcO0AZ54o662mWy10Ko1JYRzYPV4GDVEQ1-nSmbUxwAevPNaj1YUeTDdBlNUf1T4iZjXMd9OeeDO5j0p0vkYPhcJINSev6sbMJWh8_FMm5uIUDl2oU9YxrvryEZlSuikhoAjqEz1CA8KFIoT3pAQH39sYeN1dCxKSGDLXH89ENA3I95gIjQWFXzY_GYHPJIV_iT-9qgmUgc5E3gCtNTkq55Q3N7prTbro6haVn4A0Fn1dGUspRxEMhKwXyy0dgkEhQqB9lzQbiPG7m"
+                />
+                <img
+                  class="w-12 h-12 rounded-full border-2 border-surface object-cover"
+                  data-alt="portrait of a male weightlifter with dramatic shadows"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9XhHxVGl3Bj8oIig3NM6cTte0LuBlgBdbh1Xh-kThS-u3k9r9dxXsbefW6GPgl4o7PNSyxpD0ChcCWD3MKQH0rFdKKNH1P_nuoM8T_zypKlUFOya7Dx5ZulBLlmB2EWMps7HqgIn0GXxdHM4SMXEqlHFPlZxq5doIsU5Oh6vu5Fo6p8fLbzv6zmviRUkUhpCCe-iv-gWnJBxXZLf2UbUrdDC85Y6K8FnCmXrP617p9Z_jmn0p_lHqqBypKOJWXR913nCB5fd_sJZ-"
+                />
+                <img
+                  class="w-12 h-12 rounded-full border-2 border-surface object-cover"
+                  data-alt="portrait of a runner with neon highlights on skin"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdgd1P3h_w5DWFi_QWWk4Yt4E5AyxtkBzbfd0emre_J0-An3amwf7pfT8neq87DcIHgMEG5Nx3McwywoOgPqHBKSsZu0zjE24pqgjR3Em6Im5WP6tUqHa3mlQXo9LzrB1CvwlRCSzBB7KVFNAyoFW8hXP-hexQzaerun3FO3apskF7LD3cJRIWrDcvubO0Qm8HCiDHvRzEudgK1mY5TfKMuZ18goKxJ20VeDRk2vG-TU-uC5E2z5XpuowK-I7mqo0GzRLCr68oc0A"
+                />
+              </div>
+              <span class="text-on-surface-variant font-medium"
+                >+1.2k members active now</span
+              >
+            </div>
+          </div>
+          <!-- Right Content: Login Card -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div
+              class="bg-surface-container/60 glass-effect p-12 lg:p-16 rounded-lg w-full max-w-[540px] shadow-[0px_40px_80px_rgba(0,0,0,0.5)] border border-white/5 relative overflow-hidden"
+            >
+              <!-- Subtle Glow Accent -->
+              <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"
+              ></div>
+              <div class="text-center mb-10">
+                <h2
+                  class="font-headline text-4xl font-black text-white mb-2 uppercase tracking-tight"
+                >
+                  Seja bem vindo!
+                </h2>
+                <p class="text-on-surface-variant font-body">
+                  Coloque seu email e senha para acessar sua conta.
+                </p>
+              </div>
+              <form class="space-y-6">
+                <div class="space-y-2">
+                  <label
+                    class="text-sm font-bold uppercase tracking-widest text-primary ml-4"
+                    >Email</label
+                  >
+                  <div class="relative group">
+                    <input
+                      class="w-full bg-surface-container-high border-none rounded-lg px-6 py-5 text-white placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary transition-all font-medium"
+                      placeholder="name@gmail.com"
+                      type="email"
+                      id="email"
+                    />
+                    <span
+                      class="material-symbols-outlined absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant/50 group-focus-within:text-primary"
+                      >mail</span
+                    >
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-sm font-bold uppercase tracking-widest text-primary ml-4"
+                    >Senha</label
+                  >
+                  <div class="relative group">
+                    <input
+                      class="w-full bg-surface-container-high border-none rounded-lg px-6 py-5 text-white placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary transition-all font-medium"
+                      placeholder="••••••••••••"
+                      type="password"
+                      id="senha"
+                    />
+                    <span
+                      class="material-symbols-outlined absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant/50 group-focus-within:text-primary"
+                      >lock</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center justify-between px-4">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <div
+                      class="w-5 h-5 rounded bg-surface-container-highest border border-outline-variant group-hover:border-primary transition-colors flex items-center justify-center"
+                    >
+                      <div
+                        class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-hover:opacity-10"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-sm text-on-surface-variant font-medium group-hover:text-white transition-colors"
+                      >Relembrar-me</span
+                    >
+                  </label>
+                  <a
+                    class="text-sm font-bold text-secondary hover:text-white transition-colors"
+                    href="#"
+                    >Esqueceu a senha?</a
+                  >
+                </div>
+                <button
+                  class="w-full bg-gradient-to-br from-primary-dim to-primary text-on-primary py-5 rounded-xl font-headline font-extrabold text-lg tracking-wider hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(204,151,255,0.4)] transition-all active:scale-95 mt-4 flex items-center justify-center gap-2"
+                  type="button"
+                  onclick="fazerLogin()"
+                >
+                  ENTRAR
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >bolt</span
+                  >
+                </button>
+                <div
+                  class="pt-8 text-center border-t border-outline-variant/20"
+                >
+                  <p class="text-on-surface-variant">
+                    Ainda não é membro?
+                    <a
+                      class="text-white font-bold ml-1 hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4"
+                      href="#"
+                      >Torne-se membro!</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0e0e0e] rounded-t-[3rem] w-full mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 w-full">
+        <div class="space-y-6">
+          <div class="text-xl font-black text-white font-headline">
+            NEON STADIUM
+          </div>
+          <p
+            class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 leading-relaxed"
+          >
+            Elevating human performance through atmospheric environments and
+            data-driven training.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <h4 class="text-white font-bold uppercase tracking-widest text-xs">
+            Community
+          </h4>
+          <div class="flex flex-col gap-2">
+            <a
+              class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+              href="#"
+              >Instagram</a
+            >
+            <a
+              class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+              href="#"
+              >YouTube</a
+            >
+            <a
+              class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+              href="#"
+              >Facebook</a
+            >
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h4 class="text-white font-bold uppercase tracking-widest text-xs">
+            Company
+          </h4>
+          <div class="flex flex-col gap-2">
+            <a
+              class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+              href="#"
+              >Locations</a
+            >
+            <a
+              class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
+              href="#"
+              >Terms</a
+            >
+          </div>
+        </div>
+        <div class="space-y-6">
+          <h4 class="text-white font-bold uppercase tracking-widest text-xs">
+            The Newsletter
+          </h4>
+          <div class="flex gap-2">
+            <input
+              class="bg-surface-container-high border-none rounded-lg px-4 py-2 w-full text-sm"
+              placeholder="Email"
+              type="text"
+            />
+            <button
+              class="bg-primary-container text-on-primary-container p-2 rounded-lg"
+            >
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-16 py-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="font-['Be_Vietnam_Pro'] text-sm text-gray-400">
+          © 2024 NEON STADIUM. THE ELECTRIC PULSE.
+        </div>
+        <div class="flex gap-6">
+          <span
+            class="text-[#cc97ff] font-bold text-xs tracking-tighter uppercase"
+            >High Frequency Training</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

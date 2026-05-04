@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>peso pesado | THE ELECTRIC PULSE</title>
+    <link rel="icon" href="img/icon-gym.png"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap"
@@ -120,13 +121,13 @@
     <nav
       class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl dark:bg-[#0e0e0e]/60 flex justify-between items-center px-12 py-4 max-w-full mx-auto shadow-[0px_20px_40px_rgba(168,85,247,0.15)]"
     >
-    <div class="flex items-center gap-4">
-      <div
-        class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
-      >
-        peso pesado
-      </div>
-      
+      <div class="flex items-center gap-4">
+        <div
+          class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
+        >
+          peso pesado
+        </div>
+
         <img height="64px" width="64px" src="img/icon-gym-white1.png" alt="#" />
       </div>
       <div class="hidden md:flex items-center gap-12">
@@ -163,7 +164,7 @@
       <section
         class="relative min-h-screen flex items-center px-12 pt-20 overflow-hidden"
       >
-        <div class="absolute inset-0 z-0">
+        <div id="menu" class="absolute inset-0 z-0">
           <img
             class="w-full h-full object-cover opacity-40"
             data-alt="Intense high-energy gym background with purple neon lights reflecting on dark metallic fitness equipment in a cinematic wide shot"
@@ -189,20 +190,19 @@
           <p
             class="font-body text-xl text-on-surface-variant max-w-xl mb-12 leading-relaxed"
           >
-            Experience the electric pulse of high-performance training. Where
-            technology meets sweat in our premium boutique recovery and HIIT
-            studio.
+            Experimente a melhor academia da cidade, o ambiente te faz melhor e
+            ajuda alcançar seus objetivos.
           </p>
           <div class="flex items-center gap-6">
             <button
               class="bg-gradient-to-r from-primary-dim to-primary text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-all"
             >
-              START NOW
+              Começar agora
             </button>
             <button
               class="border border-outline-variant/30 bg-surface-bright/20 backdrop-blur-md text-on-surface px-10 py-5 rounded-xl font-bold text-lg hover:bg-surface-bright/40 transition-all"
             >
-              VIEW SCHEDULE
+              Duvidas? Fale conosco
             </button>
           </div>
         </div>
@@ -214,10 +214,10 @@
           <div>
             <span
               class="font-label text-primary font-bold tracking-widest uppercase mb-4 block"
-              >Our Disciplines</span
+              >Disciplina</span
             >
             <h2 class="font-headline font-extrabold text-5xl text-on-surface">
-              EVOLVE YOUR BODY
+              PARA SEU FISÍCO E SUA SAÚDE
             </h2>
           </div>
           <button class="text-primary font-bold flex items-center gap-2 group">
@@ -243,7 +243,7 @@
             <div class="absolute bottom-8 left-8">
               <h3 class="font-headline font-black text-4xl mb-2">Crossfit</h3>
               <p class="font-body text-on-surface-variant mb-4">
-                High intensity metabolic conditioning sessions.
+                Treino intenso para os que gostam de desafios extremos.
               </p>
               <span
                 class="inline-block px-4 py-1 bg-primary/20 text-primary rounded-full text-xs font-bold tracking-tighter"
@@ -263,13 +263,16 @@
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
             ></div>
             <div class="absolute bottom-8 left-8">
-              <h3 class="font-headline font-black text-4xl mb-2">Yoga</h3>
+              <h3 class="font-headline font-black text-4xl mb-2">
+                Mobilidade e lutas
+              </h3>
               <p class="font-body text-on-surface-variant mb-4">
-                Find your flow in the neon dusk.
+                Aulas de mobilidade, yoga e lutas para corpo e mente em
+                harmonia.
               </p>
               <span
                 class="inline-block px-4 py-1 bg-secondary/20 text-secondary rounded-full text-xs font-bold tracking-tighter"
-                >RECOVERY</span
+                >Alongamento</span
               >
             </div>
           </div>
@@ -286,10 +289,11 @@
             ></div>
             <div class="absolute bottom-8 left-8">
               <h3 class="font-headline font-black text-4xl mb-2">
-                Weightlifting
+                Musculação e força
               </h3>
               <p class="font-body text-on-surface-variant">
-                Precision strength training for maximum power output.
+                Todos os equipamentos de musculação e força para hipertrofia e
+                performance.
               </p>
             </div>
           </div>
@@ -321,7 +325,7 @@
             <h2
               class="font-headline font-extrabold text-5xl mb-12 text-on-surface"
             >
-              BEYOND THE <span class="text-primary">STANDARD</span>
+              ALÉM DO <span class="text-primary">PADRÃO</span>
             </h2>
             <div class="space-y-8">
               <div class="flex gap-6 items-start">
@@ -337,11 +341,11 @@
                 </div>
                 <div>
                   <h4 class="font-headline font-bold text-xl mb-2">
-                    High-Energy Atmosphere
+                    Atmosfera de Alta Energia
                   </h4>
                   <p class="font-body text-on-surface-variant">
-                    Our environment is engineered to trigger focus and
-                    adrenaline through immersive sound and lighting.
+                    Nosso ambiente foi projetado para estimular o foco e a
+                    adrenalina por meio de som e iluminação imersivos.
                   </p>
                 </div>
               </div>
@@ -358,11 +362,12 @@
                 </div>
                 <div>
                   <h4 class="font-headline font-bold text-xl mb-2">
-                    Biometric Tracking
+                    Rastreamento Biométrico
                   </h4>
                   <p class="font-body text-on-surface-variant">
-                    Real-time performance metrics synced to our mobile app to
-                    track every calorie and heartbeat.
+                    Métricas de desempenho em tempo real sincronizadas com nosso
+                    aplicativo móvel para monitorar cada caloria e batimento
+                    cardíaco.
                   </p>
                 </div>
               </div>
@@ -379,11 +384,11 @@
                 </div>
                 <div>
                   <h4 class="font-headline font-bold text-xl mb-2">
-                    Elite Recovery Zone
+                    Zona de recuperação de elite
                   </h4>
                   <p class="font-body text-on-surface-variant">
-                    Cryotherapy, infrared saunas, and personalized nutrition
-                    plans to ensure optimal results.
+                    Crioterapia, saunas de infravermelho e planos de nutrição
+                    personalizados para garantir resultados ótimos.
                   </p>
                 </div>
               </div>
@@ -396,10 +401,10 @@
         <div class="text-center mb-16">
           <span
             class="font-label text-secondary font-bold tracking-widest uppercase mb-4 block"
-            >Meet the Architects</span
+            >Conheca os instrutores</span
           >
           <h2 class="font-headline font-extrabold text-5xl text-on-surface">
-            ELITE COACHING STAFF
+            EQUIPE DE TREINADORES
           </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -539,13 +544,12 @@
             >
           </div>
           <h2 class="font-headline font-black text-6xl mb-6 text-on-surface">
-            READY TO PULSE?
+           PRONTO PARA COMEÇAR?
           </h2>
           <p
             class="font-body text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto"
           >
-            Join the stadium today and get your first week of high-performance
-            training for free. Limited spots available for the next intake.
+            Inscreva-se hoje mesmo no estádio e ganhe a primeira semana de treinamento de alto rendimento grátis. Vagas limitadas para a próxima turma.
           </p>
           <div class="flex flex-col md:flex-row gap-4 justify-center">
             <input
@@ -556,7 +560,7 @@
             <button
               class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-12 py-5 rounded-xl font-black text-lg tracking-widest hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all"
             >
-              CLAIM FREE WEEK
+              Envie seu email
             </button>
           </div>
         </div>
@@ -572,8 +576,8 @@
           <p
             class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 leading-relaxed"
           >
-            Revolutionizing the fitness experience through atmospheric depth and
-            high-performance technology.
+            Experimente a melhor academia da cidade, onde o ambiente te faz
+            melhor
           </p>
         </div>
         <div class="flex flex-col gap-4">
@@ -602,29 +606,29 @@
           <h5
             class="text-white font-semibold uppercase tracking-widest text-xs mb-2"
           >
-            Company
+            Compania
           </h5>
           <a
             class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
             href="#"
-            >Locations</a
+            >Localização</a
           >
           <a
             class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
             href="#"
-            >Privacy Policy</a
+            >Política de Privacidade</a
           >
           <a
             class="font-['Be_Vietnam_Pro'] text-sm text-gray-400 hover:text-[#e197fc] transition-colors"
             href="#"
-            >Terms</a
+            >Termos</a
           >
         </div>
         <div class="space-y-6">
           <h5
             class="text-white font-semibold uppercase tracking-widest text-xs mb-2"
           >
-            Contact
+            Contato
           </h5>
           <p class="font-['Be_Vietnam_Pro'] text-sm text-gray-400">
             info@neonstadium.com
@@ -639,7 +643,7 @@
               >location_on</span
             >
             <span class="font-['Be_Vietnam_Pro'] text-sm text-gray-400"
-              >123 Electric Ave, Neon City</span
+              >123 Av Ali perto, cidade Tamo junto</span
             >
           </div>
         </div>
@@ -648,14 +652,15 @@
         class="px-16 py-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4"
       >
         <div class="font-['Be_Vietnam_Pro'] text-sm text-gray-400">
-          © 2024 peso pesado. THE ELECTRIC PULSE.
+          © 2024 peso pesado.
         </div>
         <div class="flex gap-8">
-          <button
+          <a
             class="text-gray-500 hover:text-white transition-all text-sm uppercase tracking-tighter"
+            href="#menu"
           >
             Back to top ↑
-          </button>
+          </a>
         </div>
       </div>
     </footer>

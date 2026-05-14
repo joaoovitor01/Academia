@@ -1,0 +1,588 @@
+<!doctype html>
+
+<html class="dark" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Perfil do Aluno</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#000000",
+              "on-primary-fixed": "#000000",
+              "tertiary-fixed": "#ff909c",
+              "on-background": "#ffffff",
+              "surface-container-high": "#1f1f1f",
+              "on-error-container": "#ffb2b9",
+              "surface-container-highest": "#262626",
+              "primary-dim": "#9c48ea",
+              "tertiary-container": "#fe7e8e",
+              "surface-container-low": "#131313",
+              secondary: "#e197fc",
+              "outline-variant": "#484848",
+              "on-error": "#490013",
+              error: "#ff6e84",
+              "on-secondary-fixed-variant": "#753290",
+              "on-tertiary-fixed-variant": "#711227",
+              "surface-bright": "#2c2c2c",
+              "on-surface": "#ffffff",
+              background: "#0e0e0e",
+              "inverse-primary": "#842cd3",
+              "primary-container": "#c284ff",
+              "on-tertiary-container": "#570018",
+              "surface-tint": "#cc97ff",
+              "secondary-fixed": "#f1c1ff",
+              "tertiary-fixed-dim": "#fa7c8b",
+              "surface-dim": "#0e0e0e",
+              "on-tertiary-fixed": "#39000d",
+              "secondary-fixed-dim": "#ebaeff",
+              outline: "#757575",
+              "inverse-on-surface": "#555555",
+              "inverse-surface": "#f9f9f9",
+              "surface-container": "#191919",
+              "on-primary": "#47007c",
+              "error-dim": "#d73357",
+              "on-secondary-container": "#f1bfff",
+              "tertiary-dim": "#f47786",
+              "on-tertiary": "#680921",
+              "on-primary-fixed-variant": "#430076",
+              "secondary-dim": "#d28aed",
+              tertiary: "#ff95a0",
+              "on-secondary-fixed": "#550e71",
+              "on-secondary": "#530b6f",
+              "on-primary-container": "#360061",
+              surface: "#0e0e0e",
+              primary: "#cc97ff",
+              "error-container": "#a70138",
+              "surface-variant": "#262626",
+              "on-surface-variant": "#ababab",
+              "secondary-container": "#6a2785",
+              "primary-fixed-dim": "#b971ff",
+              "primary-fixed": "#c284ff",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              display: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-headline {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .neon-glow {
+        text-shadow: 0 0 10px rgba(204, 151, 255, 0.4);
+      }
+      .glass-panel {
+        backdrop-filter: blur(24px);
+        background: rgba(19, 19, 19, 0.6);
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-background min-h-screen">
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0px_20px_40px_rgba(168,85,247,0.15)] font-['Plus_Jakarta_Sans'] antialiased"
+    >
+      <div class="flex items-center gap-3 ml-2">
+        <img
+          alt="Admin Profile Avatar"
+          class="w-10 h-10 rounded-full border-2 border-primary-dim object-cover"
+          data-alt="Close up portrait of a professional man with modern haircut in dark lighting and neon purple rim light"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr7Q2yUR2ZsRzCDH5vyoyqoDBlcWYpFWP0_-sVWy_0OiQyjUcRHON91j8Lr6DpFXLKdzN-R0lHqO1ZLerVjFlhKKJt8qFCeZdstV-t0dLFxAU1v2y-1WQXSgCpiuNLT_5S_XNb-XwuWjDqpQbWB-pidO72-32J70_-hCohvkIoyMxCpepjMFwIwyLqv8QLsro_JU1-wjrmh_LEF-Ol3w_P6wWf7KzwCV2azdTR7ofxlFSuC_Qpflf23aOArDJpq46MoPSiw2O46QWN"
+        />
+        <h1>Pedro</h1>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <div
+          class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
+        >
+          peso pesado
+        </div>
+
+        <img height="64px" width="64px" src="img/icon-gym-white1.png" alt="#" />
+      </nav>
+      <div class="flex items-center gap-6">
+        <div class="relative group hidden lg:block">
+          <span
+            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            >search</span
+          >
+          <input
+            class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-32 transition-all"
+            placeholder="aluno..."
+            type="text"
+          />
+        </div>
+
+        <a
+          class="bg-gradient-to-br from-primary-dim to-primary text-on-primary-fixed font-headline font-extrabold px-8 py-3 rounded-xl hover:scale-105 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all active:scale-95 duration-200"
+          href="login.html"
+        >
+          Voltar
+        </a>
+      </div>
+    </header>
+    <!-- SideNavBar -->
+
+    <!-- <aside
+      class="h-screen w-64 fixed left-0 top-0 border-r border-[#cc97ff]/10 bg-[#0e0e0e] flex flex-col py-6 gap-2 pt-24 font-['Plus_Jakarta_Sans'] tracking-tight -translate-x-full md:translate-x-0 transition-transform duration-300"
+      id="sidebar"
+    >
+      <div class="px-6 mb-8">
+        <h2
+          class="text-xl font-bold bg-gradient-to-r from-[#9c48ea] to-[#cc97ff] bg-clip-text text-transparent"
+        >
+          Pulse Elite
+        </h2>
+        <p
+          class="text-xs text-on-surface-variant font-medium uppercase tracking-widest"
+        >
+          Management Hub
+        </p>
+      </div>
+      <div class="flex flex-col gap-1 flex-1">
+        <a
+          class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#surface_bright] transition-all"
+          href="#"
+        >
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Overview</span>
+        </a>
+        <a
+          class="flex items-center gap-3 bg-[#cc97ff]/10 text-[#cc97ff] rounded-full px-4 py-3 mx-2 active:translate-x-1 duration-300"
+          href="#"
+        >
+          <span class="material-symbols-outlined">group</span>
+          <span>Students</span>
+        </a>
+        <a
+          class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#surface_bright] transition-all"
+          href="#"
+        >
+          <span class="material-symbols-outlined">fitness_center</span>
+          <span>Trainers</span>
+        </a>
+        <a
+          class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#surface_bright] transition-all"
+          href="#"
+        >
+          <span class="material-symbols-outlined"
+            >settings_input_component</span
+          >
+          <span>Equipment</span>
+        </a>
+        <a
+          class="flex items-center gap-3 text-gray-500 px-4 py-3 mx-2 hover:text-[#e197fc] hover:bg-[#surface_bright] transition-all"
+          href="#"
+        >
+          <span class="material-symbols-outlined">payments</span>
+          <span>Subscription</span>
+        </a>
+      </div>
+      <div class="px-4 mt-auto">
+        <button
+          class="w-full py-4 bg-gradient-to-br from-primary-dim to-primary text-on-primary font-bold rounded-xl shadow-[0_0_15px_rgba(204,151,255,0.3)] hover:shadow-[0_0_25px_rgba(204,151,255,0.5)] transition-all"
+        >
+          Add New Student
+        </button>
+      </div>
+    </aside> -->
+
+    <!-- Main Content -->
+
+    <!-- <main class="pt-24 p-8 min-h-screen md:ml-64"> -->
+    <main class="px-6 py-8 space-y-10 pb-32">
+      <!-- Profile Header Section -->
+      <section class="mb-8">
+        <div
+          class="relative bg-surface-container rounded-lg overflow-hidden border border-outline-variant/10 shadow-2xl"
+        >
+          <div
+            class="h-48 bg-gradient-to-r from-primary-dim/20 to-secondary/20 relative"
+          >
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(156,72,234,0.15),transparent)]"
+            ></div>
+          </div>
+          <div
+            class="pb-10 -mt-16 relative z-10 flex flex-col md:flex-row gap-6 items-center md:items-end text-center md:text-left"
+          >
+            <div class="relative group">
+              <img
+                alt="Lucas Silva"
+                class="w-40 h-40 rounded-lg object-cover border-4 border-surface shadow-2xl"
+                data-alt="A focused young man with athletic build during a fitness photoshoot. He is dressed in high-quality black activewear, with sharp lighting highlighting his physique. The background is a dark, moody high-end gym with purple neon tube accents, creating a professional and premium athletic atmosphere."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXMnF1U7ljCyPJBlmtwcFLu6JQ2NDiKQh0RZNS1Y4BUt_P26DDoTUfkYgMrr7LxjhGSMzqOl2TuUhDhnT1AJZFo5hdB_px6pN8P3yag3r9yKhrL_VO6je8lc14K1AgziHSANq7ogRRJRCVi0FFTJwnviCs5QXekuAkj4Wb_-OcXHOv5UeX7dtQMczPLLkl2H8-0cn68WeEz4OEquQoh_ruaHiXopTUaPZ5PtEz4dvgNiTOCNFgD8aUDN8U7fHQzZKRwImwI7wLMkJz"
+              />
+              <div
+                class="absolute bottom-2 right-2 bg-primary p-2 rounded-full text-on-primary shadow-lg cursor-pointer hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-base"
+                  >photo_camera</span
+                >
+              </div>
+            </div>
+            <div class="flex-1 pb-2">
+              <div
+                class="flex items-center gap-4 mb-1 justify-center md:justify-start"
+              >
+                <h1
+                  class="font-extrabold text-on-surface tracking-tighter text-3xl md:text-4xl"
+                >
+                  Lucas Silva
+                </h1>
+                <span
+                  class="bg-primary/20 text-primary text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest border border-primary/30"
+                  >Plano Pro ativo</span
+                >
+              </div>
+              <p
+                class="text-on-surface-variant font-medium flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                São Paulo, Brasil • Membro desde Jan 2023
+              </p>
+            </div>
+            <div
+              class="flex gap-3 mb-2 flex-wrap justify-center md:justify-end mr-4"
+            >
+              <button
+                class="px-6 py-3 bg-gradient-to-br from-primary-dim to-primary text-on-primary font-bold rounded-xl flex items-center gap-2 shadow-lg"
+              >
+                <span class="material-symbols-outlined">edit</span>
+                editar perfil
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Bento Grid for Metrics & Info -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <!-- Metrics Column -->
+        <div class="md:col-span-4 space-y-8">
+          <!-- Mensal Frequency -->
+          <div
+            class="bg-surface-container-low rounded-lg p-8 flex items-center justify-between group hover:bg-surface-container-high transition-all"
+          >
+            <div>
+              <p
+                class="text-on-surface-variant font-medium uppercase tracking-widest text-xs mb-2"
+              >
+                Frequencia Mensal
+              </p>
+              <h3
+                class="text-6xl font-black text-on-surface leading-none tracking-tighter"
+              >
+                22
+              </h3>
+            </div>
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >calendar_today</span
+              >
+            </div>
+          </div>
+          <!-- Training Progress -->
+          <div
+            class="bg-surface-container-low rounded-lg p-8 group hover:bg-surface-container-high transition-all"
+          >
+            <div class="flex justify-between items-end mb-6">
+              <div>
+                <p
+                  class="text-on-surface-variant font-medium uppercase tracking-widest text-xs mb-2"
+                >
+                  Treino em Andamento
+                </p>
+                <h3
+                  class="text-4xl font-black text-on-surface tracking-tighter"
+                >
+                  85%
+                </h3>
+              </div>
+              <span class="text-secondary font-bold text-sm">Fase 4/5</span>
+            </div>
+            <div
+              class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden"
+            >
+              <div
+                class="h-full bg-gradient-to-r from-primary-dim to-secondary w-[85%] rounded-full shadow-[0_0_10px_rgba(204,151,255,0.5)]"
+              ></div>
+            </div>
+            <p class="text-on-surface-variant text-sm mt-4">
+              Lucas está a apenas 3 sessões de atingir sua meta mensal de perda de peso.
+            </p>
+          </div>
+        </div>
+        <!-- Detailed Info Column -->
+        <div class="md:col-span-8">
+          <div class="bg-surface-container-low rounded-lg h-full">
+            <div
+              class="p-8 border-b border-outline-variant/10 flex justify-between items-center"
+            >
+              <h3
+                class="text-xl font-bold text-on-surface flex items-center gap-3"
+              >
+                <span class="material-symbols-outlined text-primary"
+                  >person</span
+                >
+                Seus dados:
+              </h3>
+              <button
+                class="text-on-surface-variant hover:text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined">settings</span>
+              </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div class="space-y-6">
+                <div
+                  class="flex items-center justify-between p-4 bg-surface-container rounded-xl"
+                >
+                  <div>
+                    <p
+                      class="text-on-surface-variant text-xs uppercase font-bold tracking-widest mb-1"
+                    >
+                      Nome completo
+                    </p>
+                    <p class="text-on-surface font-semibold">
+                      Lucas Silva Santos
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer hover:text-primary"
+                    >edit</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between p-4 bg-surface-container rounded-xl"
+                >
+                  <div>
+                    <p
+                      class="text-on-surface-variant text-xs uppercase font-bold tracking-widest mb-1"
+                    >
+                      CPF
+                    </p>
+                    <p class="text-on-surface font-semibold">452.***.***-08</p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer hover:text-primary"
+                    >edit</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between p-4 bg-surface-container rounded-xl"
+                >
+                  <div>
+                    <p
+                      class="text-on-surface-variant text-xs uppercase font-bold tracking-widest mb-1"
+                    >
+                      Data de nascimento
+                    </p>
+                    <p class="text-on-surface font-semibold">
+                      12 Maio 1994 (29 anos)
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer hover:text-primary"
+                    >edit</span
+                  >
+                </div>
+              </div>
+              <div class="space-y-6">
+                <div
+                  class="flex items-center justify-between p-4 bg-surface-container rounded-xl"
+                >
+                  <div>
+                    <p
+                      class="text-on-surface-variant text-xs uppercase font-bold tracking-widest mb-1"
+                    >
+                      Email
+                    </p>
+                    <p class="text-on-surface font-semibold">
+                      lucas.silva@email.com
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer hover:text-primary"
+                    >edit</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between p-4 bg-surface-container rounded-xl"
+                >
+                  <div>
+                    <p
+                      class="text-on-surface-variant text-xs uppercase font-bold tracking-widest mb-1"
+                    >numero de telefone
+                    </p>
+                    <p class="text-on-surface font-semibold">
+                      +55 (11) 98765-4321
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer hover:text-primary"
+                    >edit</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between p-4 bg-surface-container rounded-xl"
+                >
+                  <div>
+                    <p
+                      class="text-on-surface-variant text-xs uppercase font-bold tracking-widest mb-1"
+                    >
+                      Contato de emergência
+                    </p>
+                    <p class="text-on-surface font-semibold">
+                      Mariana (Irmã)
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer hover:text-primary"
+                    >edit</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-8 pt-0 mt-8">
+              <div
+                class="bg-surface-bright/30 rounded-xl p-6 border border-primary/10"
+              >
+                <h4
+                  class="text-sm font-bold text-primary mb-4 flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-sm">history</span>
+                  Ultimo check-in
+                </h4>
+                <div
+                  class="flex items-center justify-between py-2 border-b border-outline-variant/10 last:border-0"
+                >
+                  <span class="text-on-surface-variant text-sm"
+                    >Data:  </span
+                  >
+                  <span class="text-on-surface text-sm font-medium"
+                    >Terça, 18:30</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between py-2 border-b border-outline-variant/10 last:border-0"
+                >
+                  <span class="text-on-surface-variant text-sm"
+                    >Tempo do treino</span
+                  >
+                  <span class="text-on-surface text-sm font-medium"
+                    >1 hora e 58 minutos</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer Note -->
+    <footer class="mt-12 text-center text-on-surface-variant text-xs">
+      <p>© 2024 Pulse Elite - Management Hub. All systems active.</p>
+    </footer>
+    <!-- </main> -->
+    <!-- BottomNavBar -->
+    <nav
+      class="fixed bottom-6 left-0 right-0 z-50 flex justify-around items-center px-4 h-20 mx-auto max-w-md bg-zinc-900/60 backdrop-blur-2xl rounded-full w-[90%] shadow-[0px_10px_30px_rgba(168,85,247,0.2)]"
+    >
+      <a href="/index.html">
+        <div
+          class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+        >
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >home</span
+          >
+          <span
+            class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+            >Home</span
+          >
+        </div>
+      </a>
+      <a href="/treino.html">
+        <div
+          class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+        >
+          <span class="material-symbols-outlined">fitness_center</span>
+          <span
+            class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+            >Exercícios</span
+          >
+        </div>
+      </a>
+      <div
+        class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+      >
+        <a
+          class="flex flex-col items-center justify-center"
+          href="/perfil.html"
+        >
+          <span class="material-symbols-outlined">person</span>
+          <span
+            class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+            >Perfil</span
+          >
+        </a>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-zinc-400 px-5 py-2 hover:text-purple-300 transition-colors"
+      >
+        <span class="material-symbols-outlined">settings</span>
+        <span
+          class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest font-semibold"
+          >Configurações</span
+        >
+      </div>
+    </nav>
+  </body>
+</html>

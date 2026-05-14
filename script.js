@@ -4,7 +4,7 @@ function fazerLogin() {
   const senha = document.getElementById("senha").value;
 
   if (email === "aluno@email.com" && senha === "123") {
-    window.location.href = "treino.html";
+    window.location.href = "perfil.html";
   } else if (email === "adm@academia.com" && senha === "admin123") {
     window.location.href = "adm.html";
   } else {

@@ -125,32 +125,24 @@
     <header
       class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0px_20px_40px_rgba(168,85,247,0.15)] font-['Plus_Jakarta_Sans'] antialiased"
     >
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3 ml-2">
+        <img
+          alt="Admin Profile Avatar"
+          class="w-10 h-10 rounded-full border-2 border-primary-dim object-cover"
+          data-alt="Close up portrait of a professional man with modern haircut in dark lighting and neon purple rim light"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr7Q2yUR2ZsRzCDH5vyoyqoDBlcWYpFWP0_-sVWy_0OiQyjUcRHON91j8Lr6DpFXLKdzN-R0lHqO1ZLerVjFlhKKJt8qFCeZdstV-t0dLFxAU1v2y-1WQXSgCpiuNLT_5S_XNb-XwuWjDqpQbWB-pidO72-32J70_-hCohvkIoyMxCpepjMFwIwyLqv8QLsro_JU1-wjrmh_LEF-Ol3w_P6wWf7KzwCV2azdTR7ofxlFSuC_Qpflf23aOArDJpq46MoPSiw2O46QWN"
+        />
+        <h1>Adm - Pedro</h1>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8">
         <div
           class="text-2xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']"
         >
           peso pesado
         </div>
 
-        <img
-          height="64px"
-          width="64px"
-          src="img/icon-gym-white1.png"
-          alt="#"
-        />
-      </div>
-      <nav class="hidden md:flex items-center gap-8">
-        <a
-          class="text-[#cc97ff] font-bold border-b-2 border-[#cc97ff] pb-1"
-          href="#"
-          >Dashboard</a
-        >
-        <a class="text-gray-400 hover:text-white transition-colors" href="#"
-          >Analytics</a
-        >
-        <a class="text-gray-400 hover:text-white transition-colors" href="#"
-          >Reports</a
-        >
+        <img height="64px" width="64px" src="img/icon-gym-white1.png" alt="#" />
       </nav>
       <div class="flex items-center gap-6">
         <div class="relative group hidden lg:block">
@@ -159,31 +151,18 @@
             >search</span
           >
           <input
-            class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-64 transition-all"
-            placeholder="Pesquisar..."
+            class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-32 transition-all"
+            placeholder="aluno..."
             type="text"
           />
         </div>
-        <div class="flex gap-4">
-          <button
-            class="text-gray-400 hover:text-[#cc97ff] transition-all hover:bg-[#cc97ff]/10 p-2 rounded-full"
-          >
-            <span class="material-symbols-outlined">notifications</span>
-          </button>
-          <button
-            class="text-gray-400 hover:text-[#cc97ff] transition-all hover:bg-[#cc97ff]/10 p-2 rounded-full"
-          >
-            <span class="material-symbols-outlined">settings</span>
-          </button>
-        </div>
-        <div class="flex items-center gap-3 ml-2">
-          <img
-            alt="Admin Profile Avatar"
-            class="w-10 h-10 rounded-full border-2 border-primary-dim object-cover"
-            data-alt="Close up portrait of a professional man with modern haircut in dark lighting and neon purple rim light"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr7Q2yUR2ZsRzCDH5vyoyqoDBlcWYpFWP0_-sVWy_0OiQyjUcRHON91j8Lr6DpFXLKdzN-R0lHqO1ZLerVjFlhKKJt8qFCeZdstV-t0dLFxAU1v2y-1WQXSgCpiuNLT_5S_XNb-XwuWjDqpQbWB-pidO72-32J70_-hCohvkIoyMxCpepjMFwIwyLqv8QLsro_JU1-wjrmh_LEF-Ol3w_P6wWf7KzwCV2azdTR7ofxlFSuC_Qpflf23aOArDJpq46MoPSiw2O46QWN"
-          />
-        </div>
+
+        <a
+          class="bg-gradient-to-br from-primary-dim to-primary text-on-primary-fixed font-headline font-extrabold px-8 py-3 rounded-xl hover:scale-105 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all active:scale-95 duration-200"
+          href="login.html"
+        >
+          Voltar
+        </a>
       </div>
     </header>
     <div class="flex pt-20 h-screen">
@@ -264,7 +243,7 @@
           <header class="mb-10 flex justify-between items-end">
             <div>
               <h1 class="text-4xl font-extrabold tracking-tight mb-2">
-                Painel Administrativo - Neon Stadium
+                Painel Administrativo
               </h1>
               <p class="text-on-surface-variant text-lg">
                 Gerencie seus alunos e acompanhe o desempenho da unidade.

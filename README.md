@@ -26,7 +26,7 @@ O projeto conta com dois fluxos de login distintos para atender às diferentes n
 
 🔑 Credenciais de Teste (Demonstração)
 
-Para testar as duas áreas de acesso do sistema, utilize as credenciais abaixo na tela de login do projeto:
+Para testar as duas áreas de acesso do sistema, utilize as credenciais abaixo na tela de login.html do projeto:
 
 Acesso aluno:
 login: aluno@email.com

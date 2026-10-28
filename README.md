@@ -51,3 +51,15 @@ Senha: admin123
 1. Clone o repositório ou baixe os arquivos.
 2. Abra a pasta do projeto no **VS Code**.
 3. Execute o arquivo `index.html` diretamente no navegador (ou utilize a extensão **Live Server** no VS Code).
+
+## Licenças de Dependências
+
+O projeto utiliza bibliotecas e componentes de terceiros. Abaixo está o mapeamento de licenças das principais dependências utilizadas:
+
+| Nome da Dependência | Licença | Permite uso comercial? | Obriga abrir o derivado? |
+| :--- | :--- | :--- | :--- |
+| **Django** | BSD 3-Clause | **Sim** | **Não** (Permissiva) |
+| **SQLite3** | Public Domain | **Sim** | **Não** (Domínio Público) |
+| **Pillow** | HPND | **Sim** | **Não** (Permissiva) |
+
+---

@@ -7,7 +7,7 @@ function fazerLogin() {
     window.location.href = "perfil.html";
   } else if (email === "adm@academia.com" && senha === "admin123") {
     window.location.href = "adm.html";
-  } else {
+  } else { 
     alert("Login ou senha incorretos!");
   }
 }
